@@ -2,7 +2,7 @@
 
 ## Spring发展历史
 
-* Spring 1.0，改变了企业级Java应用开发。依赖注入和声明式事务意味着组件之间不再需要紧耦合，不再需要笨重的EJBs。
+* Spring 1.0，改变了企业级Java应用开发。依赖注入和声明式事务。
 * Spring 2.0，自定义XML命名空间，更小、更容易理解的配置文件。
 * Spring 2.5，提供了优雅的面向注解的依赖注入模型，@Component和@Autowired，以及Spring MVC编程模型。无需显式声明组件，无需继承一些基础控制器类。
 * Spring 3.0，全新的基于Java的配置方式，替换XML，从Spring 3.1开始的@Enable打头的注解。使得写一个零XML的Spring应用更加现实。
