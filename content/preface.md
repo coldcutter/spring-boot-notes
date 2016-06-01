@@ -14,8 +14,8 @@ Spring Boot提供自动配置，大部分情况下不再需要显式的配置。
 
 Spring Boot有很多starter依赖包，聚集了许多第三方依赖包，你只需要引入这些starter包，几乎所有需要用的第三方包都会引入进来（通过依赖传递），而且这些starter包的依赖版本都是经过严格测试的，保证版本兼容性不会出现问题。
 
-Spring Boot CLI（command-line interface）通过它可以用Groovy开发应用程序，省了一大坨代码。
+Spring Boot CLI（command-line interface），可以用Groovy开发应用程序，省了一大坨代码。
 
-Spring Boot Actuator，通过它你可以看到运行中的应用程序的很多信息，有哪些bean以及它们的依赖关系，控制器路径映射，配置属性、环境变量等等。
+Spring Boot Actuator，可以看到运行中的应用程序的很多信息，有哪些bean以及它们的依赖关系，控制器路径映射，配置属性、环境变量等等。
 
 Spring Boot并非一种全新的框架，而是在Spring的基础之上，提供了开发Spring应用程序的更便捷的方法。
