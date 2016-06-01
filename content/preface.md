@@ -18,3 +18,5 @@ Spring Boot有很多starter依赖包，这些starter包聚集了许多依赖包�
 Spring Boot CLI（command-line interface）通过它可以用Groovy开发应用程序，省了一大坨代码，Getter和Setter、访问修饰符public、private，分号，return关键字这些都不用写，并且多数情况下import语句都不用写，而且你是通过命令行跑脚本的，所以都不用build。
 
 Spring Boot Actuator，通过它你可以看到运行中的应用程序的很多信息，有哪些bean以及它们的依赖关系，控制器路径映射，配置属性、环境变量等等。
+
+Spring Boot并非一种全新的框架，而是在Spring的基础之上，提供了开发Spring应用程序的更便捷的方法。
