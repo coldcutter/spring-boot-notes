@@ -65,3 +65,6 @@ public DataSource dataSource() {
 ### 1.2.3 The Command-Line Interface（CLI）
 
 上面1.1中的HelloController都没有import语句，那是因为CLI检测到RequestMapping和RestController，它知道它们来自哪些starter，CLI就会引入这些starter，并且自动配置会生效，所以就可以如此简单。
+
+### 1.2.4 The Actuator
+
