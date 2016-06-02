@@ -160,4 +160,4 @@ brew tap pivotal/tap
 brew install springboot
 ```
 
-Homebrew会安装到/usr/local/bin路径下面。
+Homebrew会把CLI安装到/usr/local/bin路径下面。
