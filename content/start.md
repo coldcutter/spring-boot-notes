@@ -169,7 +169,3 @@ sudo port install spring-boot-cli
 ```
 
 MacPorts会把CLI安装到/opt/local/share/java/spring-boot-cli路径下面，并在/opt/local/bin下面创建符号链接。
-
-**5. 命令补全**
-
-如果你是用Homebrew安装的，那么自动补全已经可以用了。否则你就需要source补全脚本了，位于shell-completion目录下，BASH和zsh各一个。
