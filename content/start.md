@@ -30,3 +30,5 @@ class HelloController {
 ```
 spring run HelloController.groovy
 ```
+
+## 主要特性
