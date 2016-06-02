@@ -155,3 +155,8 @@ sdk default springboot 1.3.5.RELEASE
 
 **3. OS X Homebrew安装**
 
+```
+brew tap pivotal/tap
+brew install springboot
+```
+
