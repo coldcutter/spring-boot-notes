@@ -53,3 +53,10 @@ public DataSource dataSource() {
 ```
 
 为了访问个数据库，每次都要自己配置这样的Bean，太烦了，Spring Boot的自动配置机制非常棒，当它发现项目中有H2依赖包，它自动给你配置一个H2的DataSource，当它发现JdbcTemplate在类路径下，自动给你配置一个JdbcTemplate，并且会帮你自动注入，你就不用自己配置上面两个Bean了，直接拿来用就好了。
+
+### 1.2.2 Starter Dependencies
+
+每次写代码，依赖是个很头疼的事情，我需要什么包？group和artifact是啥？该用哪个版本？会不会与别的包不兼容？
+
+通过Spring Boot的starter包，借助于Maven或Gradle的传递性依赖特性，你想实现某些功能，直接引入对应功能的starter包就行了，相关的依赖都会引入进来。
+
