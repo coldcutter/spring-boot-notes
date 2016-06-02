@@ -100,3 +100,8 @@ Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事
 ## 1.4 动手
 
 ### 1.4.1 安装CLI
+
+**1. 手工安装**
+
+* [spring-boot-cli-1.3.5.RELEASE-bin.zip](http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.3.5.RELEASE/spring-boot-cli-1.3.5.RELEASE-bin.zip)
+* [spring-boot-cli-1.3.5.RELEASE-bin.tar.gz](http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.3.5.RELEASE/spring-boot-cli-1.3.5.RELEASE-bin.tar.gz)
