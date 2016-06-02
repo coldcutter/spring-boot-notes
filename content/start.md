@@ -99,4 +99,4 @@ Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事
 
 ## 1.4 动手
 
-### 1.4.1 安装Spring Boot CLI
+### 1.4.1 安装CLI
