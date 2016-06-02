@@ -114,7 +114,7 @@ spring --version
 ```
 检查是否安装成功。对于Windows用户貌似就这一种方法。
 
-**2. SDKMAN安装**
+**2. SDKMAN安装（推荐）**
 
 安装SDKMAN（The Software Development Kit Manager）
 
