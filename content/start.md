@@ -10,6 +10,6 @@
 * 一个Controller，响应“Hello World”
 * 一个Web服务器，如Tomcat
 
-
+以上这么多点中，其实只有Controller才是我们关心的代码，其他的都是一些无聊的模板式的代码，多数Web应用都会用到。
 
 
