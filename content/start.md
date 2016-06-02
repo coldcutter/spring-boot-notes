@@ -112,4 +112,7 @@ Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事
 ```
 spring --version
 ```
-检查是否安装成功。对于Windows用户貌似就这一种方法
+检查是否安装成功。对于Windows用户貌似就这一种方法。
+
+**2. SDKMAN安装**
+
