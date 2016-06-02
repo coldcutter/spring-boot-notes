@@ -37,7 +37,7 @@ class HelloController {
 spring run HelloController.groovy
 ```
 
-## 1.2 主要特性
+## 1.2 Spring Boot主要特性
 
 Spring Boot并非一种全新的框架，而是在Spring的基础之上，提供了开发Spring应用程序的更便捷的方法。
 
