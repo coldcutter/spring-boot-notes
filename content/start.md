@@ -172,3 +172,4 @@ MacPorts会把CLI安装到/opt/local/share/java/spring-boot-cli路径下面，�
 
 **5. 命令补全**
 
+如果你是用Homebrew安装的，那么自动补全已经可以用了。
