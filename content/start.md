@@ -1,4 +1,4 @@
-# 1 Bootstarting Spring
+# 1 起步
 
 * Spring 1.0，改变了企业级Java应用开发。依赖注入和声明式事务。
 * Spring 2.0，自定义XML命名空间。
