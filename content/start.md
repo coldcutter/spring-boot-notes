@@ -128,3 +128,27 @@ source ~/.sdkman/bin/sdkman-init.sh
 ```
 sdk install springboot
 ```
+
+列出所有版本
+
+```
+sdk list springboot
+```
+
+安装特定版本
+
+```
+sdk install springboot 1.3.5.RELEASE
+```
+
+指定使用某版本
+
+```
+sdk use springboot 1.3.5.RELEASE
+```
+
+设置默认版本
+
+```
+sdk default springboot 1.3.5.RELEASE
+```
