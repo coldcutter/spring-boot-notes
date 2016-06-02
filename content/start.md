@@ -63,3 +63,5 @@ public DataSource dataSource() {
 比如你想写一个web应用，直接引入“web” starter（org.springframework .boot:spring-boot-starter-web），如果你需要security，直接引入“security” starter，所有相关的依赖都会引入进来。
 
 ### 1.2.3 The Command-Line Interface（CLI）
+
+上面1.1中的HelloController都没有import语句，那是因为CLI检测到RequestMapping和RestController，它知道它们来自哪些starter，CLI就会引入这些starter，并且自动配置会生效，所以就可以如此简单。
