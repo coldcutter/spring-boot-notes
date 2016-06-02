@@ -164,3 +164,7 @@ Homebrew会把CLI安装到/usr/local/bin路径下面。
 
 **4. OS X MacPorts安装**
 
+```
+sudo port install spring-boot-cli
+```
+
