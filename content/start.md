@@ -90,3 +90,7 @@ public DataSource dataSource() {
 ## 1.3 误解
 
 Spring Boot不是一个应用服务器，虽然通过Spring Boot你可以构建一个可执行的jar包（web应用），那是通过内置Servlet容器来实现的（Tomcat，Jetty，Undertow），而不是Spring Boot本身提供的。
+
+Spring Boot不实现任何的Java标准，比如JPA或JMS，它只是通过自动配置实现这些标准的Bean来实现这些功能的。
+
+Spring Boot不生成任何代码。
