@@ -116,3 +116,10 @@ spring --version
 
 **2. SDKMAN安装**
 
+安装SDKMAN（The Software Development Kit Manager）
+
+```
+curl -s get.sdkman.io | bash
+source ~/.sdkman/bin/sdkman-init.sh
+```
+
