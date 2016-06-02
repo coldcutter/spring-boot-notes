@@ -152,3 +152,5 @@ sdk use springboot 1.3.5.RELEASE
 ```
 sdk default springboot 1.3.5.RELEASE
 ```
+
+**3. HomeBrew安装
