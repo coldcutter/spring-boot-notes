@@ -94,3 +94,5 @@ Spring Boot不是一个应用服务器，虽然通过Spring Boot你可以构建�
 Spring Boot不实现任何的Java标准，比如JPA或JMS，它只是通过自动配置实现这些标准的Bean来实现这些功能的。
 
 Spring Boot不生成任何代码。
+
+Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事情。
