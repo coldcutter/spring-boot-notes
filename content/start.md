@@ -1,4 +1,4 @@
-# 1 起步
+# 1 Bootstarting Spring
 
 * Spring 1.0，改变了企业级Java应用开发。依赖注入和声明式事务。
 * Spring 2.0，自定义XML命名空间。
@@ -96,3 +96,5 @@ Spring Boot不实现任何的Java标准，比如JPA或JMS，它只是通过自�
 Spring Boot不生成任何代码。
 
 Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事情。
+
+## 1.4 
