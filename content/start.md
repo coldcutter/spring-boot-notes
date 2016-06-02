@@ -39,6 +39,8 @@ spring run HelloController.groovy
 
 ## 1.2 主要特性
 
+Spring Boot并非一种全新的框架，而是在Spring的基础之上，提供了开发Spring应用程序的更便捷的方法。
+
 ### 1.2.1 Auto Configuration
 
 如果你要用JDBC访问关系型数据库，就需要配置一个JdbcTemplate，像这样：
