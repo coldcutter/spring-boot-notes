@@ -58,7 +58,7 @@ public DataSource dataSource() {
 
 每次写代码，依赖是个很头疼的事情，我需要什么包？group和artifact是啥？该用哪个版本？会不会与别的包不兼容？
 
-通过Spring Boot的starter包，借助于Maven或Gradle的传递性依赖特性，你想实现某些功能，直接引入对应功能的starter包就行了，相关的依赖都会引入进来。
+通过Spring Boot的starter包，借助于Maven或Gradle的传递性依赖特性，你想实现某些功能，直接引入对应功能的starter包就行了，相关的依赖都会引入进来，而且这些starter包的依赖版本都是经过严格测试的，保证版本兼容性不会出现问题。
 
 比如你想写一个web应用，直接引入“web” starter（org.springframework .boot:spring-boot-starter-web），如果你需要security，直接引入“security” starter，所有相关的依赖都会引入进来。
 
