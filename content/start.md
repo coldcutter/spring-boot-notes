@@ -12,4 +12,15 @@
 
 以上这么多点中，其实只有Controller才是我们关心的代码，其他的都是一些无聊的模板式的代码，多数Web应用都会用到。
 
+看看Spring Boot怎么写：
 
+```
+@RestController
+class HelloController {
+  
+  @RequestMapping("/")
+  def hello() {
+    return "Hello World"
+  }
+}
+```
