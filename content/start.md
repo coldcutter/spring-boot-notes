@@ -86,3 +86,7 @@ public DataSource dataSource() {
 * 各种指标比如内存使用，垃圾回收，网络请求，数据源使用情况等
 
 可以通过web路径或者shell命令查看（SSH）。
+
+## 1.3 误解
+
+Spring Boot不是一个应用服务器，虽然通过Spring Boot你可以构建一个可执行的jar包（web应用），那是通过内置Servlet容器来实现的（Tomcat，Jetty，Undertow），而不是Spring Boot本身提供的。
