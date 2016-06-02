@@ -84,3 +84,5 @@ public DataSource dataSource() {
 * 当前各种线程的状态
 * 近期的HTTP请求
 * 各种指标比如内存使用，垃圾回收，网络请求，数据源使用情况等
+
+可以通过web路径或者shell命令查看（SSH）。
