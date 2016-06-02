@@ -24,3 +24,9 @@ class HelloController {
   }
 }
 ```
+
+没有配置，没有web.xml，也没有构建脚本，甚至没有server，如果你安装了CLI，你就可以这么运行：
+
+```
+spring run HelloController.groovy
+```
