@@ -123,3 +123,8 @@ curl -s get.sdkman.io | bash
 source ~/.sdkman/bin/sdkman-init.sh
 ```
 
+安装CLI
+
+```
+sdk install springboot
+```
