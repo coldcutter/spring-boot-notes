@@ -62,4 +62,4 @@ public DataSource dataSource() {
 
 比如你想写一个web应用，直接引入“web” starter（org.springframework .boot:spring-boot-starter-web），如果你需要security，直接引入“security” starter，所有相关的依赖都会引入进来。
 
-### 1.2.3 The Command-Line Interface(CLI)
+### 1.2.3 The Command-Line Interface（CLI）
