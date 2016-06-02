@@ -97,4 +97,4 @@ Spring Boot不生成任何代码。
 
 Spring Boot就是Spring，它只是帮你做了本来需要你手工去做的事情。
 
-## 1.4 
+## 1.4 动手
