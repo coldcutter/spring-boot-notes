@@ -1,5 +1,11 @@
 # 1 起步
 
+* Spring 1.0，改变了企业级Java应用开发。依赖注入和声明式事务。
+* Spring 2.0，自定义XML命名空间。
+* Spring 2.5，面向注解的依赖注入模型，@Component和@Autowired，以及Spring MVC编程模型。无需显式声明组件，无需继承一些基础控制器类。
+* Spring 3.0，全新的基于Java的配置方式，从Spring 3.1开始的@Enable打头的注解，去XML化。
+* Spring 4.0，条件配置，运行过程中可以根据类路径，环境等因素觉得哪些配置生效，哪些配置忽略。
+
 ## 1.1 传统Web应用程序
 
 假设我们要写一个非常简单的Hello World Web应用，至少需要以下这些东西：
