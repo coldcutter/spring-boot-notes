@@ -180,4 +180,19 @@ Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot
 * Spring Boot CLI
 
 打开IDEA，选择File > New > Project，出来下图
+
 ![Step 1](QQ20160603-1@2x.png) 
+
+点击Next，
+
+![Step 2](QQ20160603-2@2x.png)
+
+这里做一些基本配置，点击Next，
+
+![Step 3](QQ20160603-3@2x.png)
+
+这里选择你要的功能（依赖），其实就是starter依赖包，常用的比如Security、Web、JPA、MySQL等，点击Next，
+
+![Step 4](QQ20160603-4@2x.png)
+
+最后填写项目名称和路径，点击Finish，一个项目骨架就生成并导入IDEA了。
