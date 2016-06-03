@@ -21,4 +21,4 @@
 
 ReadingListApplication类有两个作用：主配置类和启动类。尽管Spring Boot自动配置特性能减少许多配置，但是至少需要有一个配置类来激活自动配置，@SpringBootApplication注解组合了其他三个有用的注解：
 
-
+* Spring的@Configuration注解，指派该类成为配置类
