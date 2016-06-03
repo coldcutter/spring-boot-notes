@@ -172,4 +172,9 @@ MacPorts会把CLI安装到/opt/local/share/java/spring-boot-cli路径下面，�
 
 ### 1.4.2 Spring Initializer
 
-Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot项目的骨架（Maven或Gradle）。
+Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot项目的骨架（Maven或Gradle），有几种使用方法
+
+* 通过网页
+* Spring Tool Suite
+* IntelliJ IDEA
+* Spring Boot CLI
