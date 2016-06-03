@@ -201,3 +201,10 @@ Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot
 
 **通过Spring Boot CLI**
 
+可以用spring init命令来生成项目：
+
+获得使用帮助
+
+```
+spring help init
+```
