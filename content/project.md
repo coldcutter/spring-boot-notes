@@ -27,7 +27,7 @@ ReadingListApplication类有两个作用：主配置类和启动类。尽管Spri
 
 如何运行呢？有三种方法：
 
-**1. 如果你在**
+**1. 直接运行**
 
 如果你在IDEA里，直接右键ReadingListApplication.java，点击Run就可以运行了（多亏了main函数）
 
