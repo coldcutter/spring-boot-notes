@@ -38,3 +38,10 @@ ReadingListApplication类有两个作用：主配置类和启动类。尽管Spri
 ```
 gradle bootRun
 ```
+
+**3. 打包运行**
+
+```
+gradle build
+java -jar build/libs/readinglist-0.0.1-SNAPSHOT.jar
+```
