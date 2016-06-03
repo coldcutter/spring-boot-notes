@@ -19,3 +19,4 @@
 * 测试代码位于/src/test/java
 * 测试资源位于/src/test/resources
 
+ReadingListApplication类有两个作用：主配置类和启动类
