@@ -23,3 +23,4 @@ ReadingListApplication类有两个作用：主配置类和启动类。尽管Spri
 
 * Spring的@Configuration注解，指派该类成为配置类
 * Spring的@ComponentScan注解，激活组件扫描功能，因此Web控制器类（@Controller）以及其他组件（如@Component，@Service等）可以自动注册为Spring application context中的beans
+* Spring Boot的@EnableAutoConfiguration注解，激活自动配置
