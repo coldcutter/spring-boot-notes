@@ -199,3 +199,5 @@ Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot
 
 最后填写项目名称和路径，点击Finish，一个项目骨架就生成并导入IDEA了。
 
+**通过Spring Boot CLI**
+
