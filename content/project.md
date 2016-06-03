@@ -12,3 +12,10 @@
 
 ![Project Structure](QQ20160603-2.png)
 
+项目结构符合Gradle或者Maven的一般规范：
+
+* 主代码位于/src/main/java
+* 主资源位于/src/main/resources
+* 测试代码位于/src/test/java
+* 测试资源位于/src/test/resources
+
