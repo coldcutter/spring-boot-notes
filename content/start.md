@@ -177,7 +177,7 @@ Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot
 * [通过网页](http://start.spring.io)（很简单，略）
 * Spring Tool Suite（基于Eclipse，还是用IDEA吧）
 * IntelliJ IDEA（推荐）
-* Spring Boot CLI（推荐）
+* Spring Boot CLI
 
 打开IDEA，选择File > New > Project，出来下图
 
