@@ -46,6 +46,6 @@ gradle build
 java -jar build/libs/readinglist-0.0.1-SNAPSHOT.jar
 ```
 
-正常情况下应用启动，访问http://localhost:8080，不过目前还没有Controller，所以会是HTTP 404 Not Found
+正常情况下应用启动，访问localhost:8080，不过目前还没有Controller，所以会是HTTP 404 Not Found
 
 注：如果有其他的配置，建议放到其他的@Configuration配置类中，独立于ReadingListApplication类
