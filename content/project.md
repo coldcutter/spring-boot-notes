@@ -19,4 +19,6 @@
 * 测试代码位于/src/test/java
 * 测试资源位于/src/test/resources
 
-ReadingListApplication类有两个作用：主配置类和启动类
+ReadingListApplication类有两个作用：主配置类和启动类。尽管Spring Boot自动配置特性能减少许多配置，但是至少需要有一个配置类来激活自动配置，@SpringBootApplication注解组合了其他三个有用的注解：
+
+
