@@ -208,3 +208,9 @@ Spring Initializer就是一个Web应用，你可以用它生成一个Spring Boot
 ```
 spring help init
 ```
+
+获得所有参数、项目类型和依赖列表
+
+```
+spring init --list
+```
