@@ -16,3 +16,7 @@ Using default security password: 297af950-707a-48d1-a2cb-cc29909080f3
 ```
 
 显然，大部分情况下这不是我们想要的样子，我们可能需要一个登录页面，然后利用数据库认证用户，所以Spring Boot关于security的自动配置不满足我们的要求，我们需要自定义security配置。
+
+我们只需要提供一个继承了WebSecurityConfigurerAdapter的配置类SecurityConfig就可以覆盖自动配置了：
+
+
