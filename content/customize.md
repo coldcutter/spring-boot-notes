@@ -191,3 +191,4 @@ server:
     key-password: letmein
 ```
 
+这里key-store的位置，可以用file://来指定文件系统的位置（比如file:///Users/coldcutter/mykeys.jks），但是如果keystore文件被打包进了JAR包，得用classpath:来引用它。
