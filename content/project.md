@@ -138,4 +138,4 @@ task wrapper(type: Wrapper) {
 
 构建插件的主要作用是能把所有依赖包打进一个user-JAR包，并且加入了manifest，使之能够用java -jar运行。
 
-上面的依赖都没有指定版本，主要是因为插件有个版本springBootVersion = '1.3.5.RELEASE'，所以下面依赖的版本默认都是'1.3.5.RELEASE'。
+上面的依赖都没有指定版本，因为starter的版本和Spring Boot的版本是一样的，你可以使用gradle dependencies（或mvn dependency:tree）来查看项目的依赖版本。
