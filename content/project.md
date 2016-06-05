@@ -346,8 +346,8 @@ MyService bean只有在JdbcTemplate类在classpath的情况下才会被创建。
 | -- | -- |
 | @ConditionalOnBean | 指定的Bean存在 |
 | @ConditionalOnMissingBean | 指定的Bean还未存在 |
-| @ConditionalOnClass | ...the specified class is available on the classpath |
-| @ConditionalOnMissingClass | ...the specified class is not available on the classpath |
+| @ConditionalOnClass | 指定的类在classpath下 |
+| @ConditionalOnMissingClass | 指定的类不在classpath下 |
 | @ConditionalOnExpression | ...the given Spring Expression Language (SpEL) expres- sion evaluates to true |
 | @ConditionalOnJava | 1:7 |
 | @ConditionalOnJndi | 1:8 |
