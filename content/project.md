@@ -342,3 +342,16 @@ public MyService myService() {
 
 MyService bean只有在JdbcTemplate类在classpath的情况下才会被创建。
 
+| Conditional注解 | Configuration applied if...? |
+| -- | -- |
+| @ConditionalOnBean | ...the specified bean has been configured |
+| @ConditionalOnMissingBean | ...the specified bean has not already been configured |
+| @ConditionalOnClass | ...the specified class is available on the classpath |
+| @ConditionalOnMissingClass | ...the specified class is not available on the classpath |
+| @ConditionalOnExpression | ...the given Spring Expression Language (SpEL) expres- sion evaluates to true |
+| @ConditionalOnJava | 1:7 |
+| @ConditionalOnJndi | 1:8 |
+| @ConditionalOnProperty | 1:9 |
+| @ConditionalOnResource | 1:10 |
+| @ConditionalOnWebApplication | 1:11 |
+| @ConditionalOnNotWebApplication | 1:12 |
