@@ -341,4 +341,3 @@ public MyService myService() {
 ```
 
 MyService bean只有在JdbcTemplate类在classpath的情况下才会被创建。
-
