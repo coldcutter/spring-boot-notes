@@ -174,3 +174,5 @@ export spring_thymeleaf_cache=false
 
 **配置内置服务器**
 
+修改端口：server.port
+
