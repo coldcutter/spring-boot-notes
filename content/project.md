@@ -71,4 +71,4 @@ public class ReadingListApplicationTests {
 }
 ```
 
-在一般的Spring测试类中，你都会用注解@ContextConfiguration来加载Spring应用上下文，不过在Spring Boot测试类中，你用注解@SpringApplicationConfiguration来代替。
+在一般的Spring测试类中，你都会用注解@ContextConfiguration来加载Spring应用上下文，不过在Spring Boot测试类中，你用注解@SpringApplicationConfiguration来代替。此类目前只有contextLoads()一个测试方法，用来验证ReadingListApplication这个配置类是否没有问题。
