@@ -172,3 +172,5 @@ export spring_thymeleaf_cache=false
 
 注意把.（点）和-（横杠）替换成\_（下划线）
 
+**配置内置服务器**
+
