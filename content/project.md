@@ -139,3 +139,12 @@ task wrapper(type: Wrapper) {
 构建插件的主要作用是能把所有依赖包打进一个user-JAR包，并且加入了manifest，使之能够用java -jar运行。
 
 上面的依赖都没有指定版本，因为starter的版本和Spring Boot的版本是一样的，你可以使用gradle dependencies（或mvn dependency:tree）来查看项目的依赖版本。
+
+如果你想排除starter中的某个传递性依赖，比如Jackson JSON library（from web starter），你可以exclude它：
+
+```
+compile("org.springframework.boot:spring-boot-starter-web") {
+  exclude group: 'com.fasterxml.jackson.core'
+}
+```
+
