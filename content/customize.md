@@ -135,4 +135,4 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 6. 应用外部的application.properties或application.yml文件
 7. 应用内部的application.properties或application.yml文件
 8. @PropertySource指定的属性源
-9. 
+9. 默认属性
