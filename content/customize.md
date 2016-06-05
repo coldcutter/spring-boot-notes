@@ -150,3 +150,8 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 
 **关闭模板缓存**
 
+当你修改Thymeleaf模板的时候，你会发现每次都需要重启才会生效，原因就在于，为了提高性能，默认会缓存模板（只需编译一次），你可以通过设置spring.thymeleaf.cache为false来关闭模板缓存，比如通过命令行参数：
+
+```
+java -jar readinglist-0.0.1-SNAPSHOT.jar --spring.thymeleaf.cache=false
+```
