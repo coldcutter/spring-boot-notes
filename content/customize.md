@@ -62,3 +62,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   }
 }
 ```
+
+加了这个类之后，Spring Boot会跳过security自动配置而使用这个配置类。
