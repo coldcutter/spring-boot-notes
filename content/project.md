@@ -82,3 +82,5 @@ public class ReadingListApplicationTests {
 ```
 server.port=8000
 ```
+
+这样内置Tomcat服务器就会监听8000端口了（默认是8080）。
