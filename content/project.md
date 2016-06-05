@@ -287,3 +287,8 @@ readersBooks()方法返回一个逻辑视图名“readingList”，所以我们�
   </body>
 </html>
 ```
+
+**添加css**
+
+在src/main/resources/static目录下建一个style.css：
+
