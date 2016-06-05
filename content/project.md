@@ -50,6 +50,8 @@ java -jar build/libs/readinglist-0.0.1-SNAPSHOT.jar
 
 注：如果有其他的配置，建议放到其他的@Configuration配置类中，独立于ReadingListApplication类
 
+**测试**
+
 ReadingListApplicationTests类是测试类：
 
 ```
