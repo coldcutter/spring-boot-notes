@@ -49,3 +49,25 @@ java -jar build/libs/readinglist-0.0.1-SNAPSHOT.jar
 正常情况下应用启动，访问localhost:8080，不过目前还没有Controller，所以会是HTTP 404 Not Found
 
 注：如果有其他的配置，建议放到其他的@Configuration配置类中，独立于ReadingListApplication类
+
+ReadingListApplicationTests类是测试类：
+
+```
+package readinglist;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.SpringApplicationConfiguration; import org.springframework.test.context.junit4.SpringJUnit4ClassRunner; import org.springframework.test.context.web.WebAppConfiguration;
+
+import readinglist.ReadingListApplication;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = ReadingListApplication.class)
+@WebAppConfiguration
+public class ReadingListApplicationTests {
+  @Test
+  public void contextLoads() {
+  }
+}
+```
+
