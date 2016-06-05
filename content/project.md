@@ -314,4 +314,4 @@ label {
 
 至此，一个完整的项目就写完了，几乎没有什么配置，我们写的完全都是业务代码。这是如何做到的呢？
 
-Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类
+Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类，Spring Boot利用了Spring 4
