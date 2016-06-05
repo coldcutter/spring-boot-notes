@@ -292,3 +292,22 @@ readersBooks()方法返回一个逻辑视图名“readingList”，所以我们�
 
 在src/main/resources/static目录下建一个style.css：
 
+```
+body {
+    background-color: #cccccc;
+    font-family: arial,helvetica,sans-serif;
+}
+
+.bookHeadline {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.bookDescription {
+    font-size: 10pt;
+}
+
+label {
+    font-weight: bold;
+}
+```
