@@ -182,4 +182,14 @@ export spring_thymeleaf_cache=false
 keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RSA
 ```
 
-你会被问及一些问题，比如名字、组织等（无关紧要的），但是密码很重要，得记住，比如我用“letmein”作为密码。
+你会被问及一些问题，比如名字、组织等（无关紧要的），但是密码很重要，得记住，比如我用“letmein”作为密码，然后在application.yml中配置属性：
+
+```
+server:
+  port: 8443
+  ssl:
+    key-store: file:///path/to/mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+```
+
