@@ -122,4 +122,18 @@ targetCompatibility = 1.8
 repositories {
   mavenCentral()
 }
+
+dependencies {
+  compile('org.springframework.boot:spring-boot-starter-data-jpa')
+  compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+  compile('org.springframework.boot:spring-boot-starter-web')
+  runtime('com.h2database:h2')
+  testCompile('org.springframework.boot:spring-boot-starter-test') 
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.12'
+}
 ```
+
+构建插件的主要作用是能把所有依赖包打进一个user-JAR包，并且加入了manifest，使之能够用java -jar运行。
