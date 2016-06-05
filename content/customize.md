@@ -122,3 +122,5 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 首先，Spring Boot会优先考虑应用提供的配置类，然后才是自动配置类，其次，多亏了SecurityConfig的@EnableWebSecurity注解，这个注解会import WebSecurityConfiguration，然后自动配置的SpringBootWebSecurityConfiguration这个类因为不满足@ConditionalOnMissingBean(WebSecurityConfiguration.class)而不生效。
 
 ## 3.2 使用properties外化配置
+
+很多情况下我们不会完全不用自动配置，而是需要修改某几个配置属性，Spring Boot提供了超过300个属性，通过属性来修改自动配置的bean参数会是种更方便的选择。
