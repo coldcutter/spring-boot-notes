@@ -151,3 +151,6 @@ compile("org.springframework.boot:spring-boot-starter-web") {
 ```
 
 类似的，如果你想用另一个版本的Jackson，也是可以的，但是Gradle和Maven的传递性依赖解析机制是不一样，在Maven中，总是选择最近的依赖（直接依赖优先级高于传递性依赖），所以直接引入一个Jackson依赖就可以了，它会覆盖传递性依赖，在Gradle中则不同，Gradle会选择更高版本的依赖，所以如果你选择的Jackson版本高于starter中的版本，那没什么问题，如果低于starter中的版本，那就必须先像上面一样exclude掉了。
+
+## 2.2 写代码
+
