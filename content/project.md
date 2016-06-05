@@ -39,6 +39,12 @@ ReadingListApplication类有两个作用：主配置类和启动类。尽管Spri
 gradle bootRun
 ```
 
+或者Maven goal：
+
+```
+mvn spring-boot:run
+```
+
 **3. 打包运行**
 
 ```
