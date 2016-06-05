@@ -66,6 +66,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 加了这个类之后，Spring Boot会跳过security自动配置而使用这个配置类。当然，还需要加入Reader类和ReaderRepository接口：
 
 ```
+package readinglist;
+import java.util.Arrays;
+import java.util.Collection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
 public class Reader implements UserDetails {
   @Id
