@@ -71,3 +71,4 @@ public class ReadingListApplicationTests {
 }
 ```
 
+在一般的Spring测试类中，你都会用注解@ContextConfiguration来加载Spring应用上下文，不过在Spring Boot测试类中，你用注解@SpringApplicationConfiguration来代替。
