@@ -31,7 +31,7 @@ ReadingListApplication类有两个作用：主配置类和启动类。尽管Spri
 
 如果你在IDEA里，直接右键ReadingListApplication.java，点击Run就可以运行了（多亏了main函数）
 
-**2. bootRun**
+**2. Gradle或Maven**
 
 使用Spring Boot Gradle Plugin提供的bootRun task：
 
