@@ -180,4 +180,4 @@ public class Book {
 }
 ```
 
-@Entity定义了这是一个JPA实体类，@Id指定了这个entity的identity，@GeneratedValue说明这个字段会自动生成。
+@Entity定义了这是一个JPA实体类，@Id指定了这个实体的identity，@GeneratedValue说明这个字段会自动生成。
