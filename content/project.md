@@ -314,4 +314,23 @@ label {
 
 至此，一个完整的项目就写完了，几乎没有什么配置，我们写的完全都是业务代码。这是如何做到的呢？
 
-Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类，Spring Boot利用了Spring 4
+Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类，Spring Boot利用了Spring 4.0引入的条件配置（conditional configuration）来实现自动配置，你可以自己写条件，只要实现Condition接口，覆盖它的matches()方法即可：
+
+```
+package readinglist;
+        import org.springframework.context.annotation.Condition;
+        import org.springframework.context.annotation.ConditionContext;
+        import org.springframework.core.type.AnnotatedTypeMetadata;
+        public class JdbcTemplateCondition implements Condition {
+          @Override
+          public boolean matches(ConditionContext context,
+                                 AnnotatedTypeMetadata metadata) {
+            try {
+              context.getClassLoader().loadClass(
+                     "org.springframework.jdbc.core.JdbcTemplate");
+             return true;
+            } catch (Exception e) {
+              return false;
+} }
+}
+```
