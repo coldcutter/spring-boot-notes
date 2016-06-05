@@ -118,3 +118,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface ReaderRepository extends JpaRepository<Reader, String> {
 }
 ```
+
+首先，Spring Boot会优先考虑应用提供的配置类，然后才是自动配置类，其次，多亏了SecurityConfig的@EnableWebSecurity注解，这个注解会import WebSecurityConfiguration，然后自动配置的SpringBootWebSecurityConfiguration这个类因为不满足@ConditionalOnMissingBean(WebSecurityConfiguration.class)而不生效。
