@@ -131,5 +131,5 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 2. JNDI属性 from java:comp/env
 3. JVM系统属性
 4. 操作系统环境变量
-5. random.*前缀的随机生成的值（设置其他属性时引用的，如${random.long}
+5. random.*前缀的随机生成的值（设置其他属性时引用的，如${random.long}）
 6. 
