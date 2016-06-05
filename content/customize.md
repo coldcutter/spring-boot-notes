@@ -136,3 +136,10 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 7. 应用内部的application.properties或application.yml文件
 8. @PropertySource指定的属性源
 9. 默认属性
+
+至于application.properties和application.yml，它们可以位于任意4个位置：
+
+1. 外部，应用运行目录的/config子目录下
+2. 外部，应用运行目录下
+3. 内部，config包下
+4. 内部，classpath根路径下
