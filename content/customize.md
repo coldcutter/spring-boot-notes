@@ -72,11 +72,9 @@ public class Reader implements UserDetails {
   private String username;
   private String fullname;
   private String password;
-  
   // getters and setters
   
   // UserDetails methods
-  
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     return Arrays.asList(new SimpleGrantedAuthority("READER"));
