@@ -196,3 +196,6 @@ public interface ReadingListRepository extends JpaRepository<Book, Long> {
 ```
 
 只需要定义一个继承Spring Data JPA的JpaRepository的接口，ReadingListRepository继承了18个通用的持久化操作，JpaRepository的两个参数Book和Long，分别指明了domain类型和这个domain的id类型，我们添加了一个findByReader方法，提供一个reader的名字，就能找出相关的Book列表，不用担心，当应用启动的时候，Spring Data会自动实现这个接口，你什么也不用做。
+
+**定义Spring MVC Controller**
+
