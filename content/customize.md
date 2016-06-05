@@ -124,3 +124,12 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 ## 3.2 使用properties外化配置
 
 很多情况下我们不会完全不用自动配置，而是需要修改某几个配置属性，Spring Boot提供了超过300个属性，通过属性来修改自动配置的bean参数会是种更方便的选择，可以通过环境变量、Java系统属性、JNDI、命令行参数或属性文件来提供。
+
+有这些地方可以配置属性，优先级从高到低（列表靠前的覆盖靠后的）：
+
+1. 命令行参数
+2. JNDI属性 from java:comp/env
+3. JVM系统属性
+4. 操作系统环境变量
+5. random.*前缀的随机生成的值（设置其他属性时引用的，如${random.long}
+6. 
