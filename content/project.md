@@ -179,3 +179,5 @@ public class Book {
   // getters and setters
 }
 ```
+
+@Entity定义了这是一个JPA实体类，@Id指定了这个entity的identity，@GeneratedValue说明这个字段会自动生成。
