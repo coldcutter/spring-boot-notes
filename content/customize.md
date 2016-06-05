@@ -148,5 +148,5 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 
 下面介绍一些常用的配置属性。
 
-**不用模板缓存**
+**关闭模板缓存**
 
