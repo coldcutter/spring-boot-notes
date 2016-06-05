@@ -154,7 +154,7 @@ compile("org.springframework.boot:spring-boot-starter-web") {
 
 ## 2.2 写代码
 
-**领域对象**
+**定义领域对象**
 
 ```
 package readinglist;
