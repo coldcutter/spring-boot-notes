@@ -155,3 +155,13 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 ```
 java -jar readinglist-0.0.1-SNAPSHOT.jar --spring.thymeleaf.cache=false
 ```
+
+或者通过application.yml：
+
+```
+spring:
+  thymeleaf:
+    cache: false
+```
+
+不过务必**确保在生产环境上不要关闭模板缓存**
