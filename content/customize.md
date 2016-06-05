@@ -145,3 +145,8 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 4. 内部，classpath根路径下
 
 上面的列表也是优先级从高到低的，当application.properties和application.yml同时存在于同一优先级目录时，yml会覆盖properties文件的属性。
+
+下面介绍一些常用的配置属性。
+
+**不用模板缓存**
+
