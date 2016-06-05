@@ -314,7 +314,7 @@ label {
 
 至此，一个完整的项目就写完了，几乎没有什么配置，我们写的完全都是业务代码。这是如何做到的呢？
 
-Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类，Spring Boot利用了Spring 4.0引入的条件配置（conditional configuration）来实现自动配置，你可以自己写条件，只要实现Condition接口，覆盖它的matches()方法即可：
+Spring Boot会引入一个包spring-boot-autoconfigure，里面有各种Configuration类，Spring Boot利用了Spring 4.0引入的条件配置（conditional configuration）来实现自动配置，你可以自己写条件，只要实现Condition接口，覆盖它的matches()方法即可，比如：
 
 ```
 package readinglist;
