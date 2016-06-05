@@ -132,4 +132,7 @@ public interface ReaderRepository extends JpaRepository<Reader, String> {
 3. JVM系统属性
 4. 操作系统环境变量
 5. random.\*前缀的随机生成的值（设置其他属性时引用的，如${random.long}）
-6. 应用外部的
+6. 应用外部的application.properties或application.yml文件
+7. 应用内部的application.properties或application.yml文件
+8. @PropertySource指定的属性源
+9. 
