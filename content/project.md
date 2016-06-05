@@ -107,4 +107,8 @@ buildscript {
     classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
   }
 }
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
 ```
