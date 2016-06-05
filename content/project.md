@@ -98,14 +98,12 @@ Spring Boot为Gradle何Maven提供了构建插件，以Gradle为例：
 ```
 buildscript {
   ext {
-    springBootVersion = `1.3.0.RELEASE`
+    springBootVersion = '1.3.5.RELEASE'
   }
   repositories {
     mavenCentral()
   }
   dependencies {
 classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-Depend
-on Spring Boot plugin
   } }
 ```
