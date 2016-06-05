@@ -333,5 +333,10 @@ public class JdbcTemplateCondition implements Condition {
     }
   }
 }
+
+@Conditional(JdbcTemplateCondition.class)
+public MyService myService() {
+  // ...
+}
 ```
 
