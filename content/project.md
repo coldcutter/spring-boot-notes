@@ -93,4 +93,5 @@ server.port=8000
 
 **如何构建**
 
-Spring Boot为Gradle何Maven提供了构建插件。
+Spring Boot为Gradle何Maven提供了构建插件，以Gradle为例：
+
