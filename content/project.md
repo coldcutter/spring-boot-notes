@@ -342,7 +342,7 @@ public MyService myService() {
 
 MyService bean只有在JdbcTemplate类在classpath的情况下才会被创建。
 
-| Conditional注解 | Configuration applied if...? |
+| Conditional注解 | 什么情况下配置生效 |
 | -- | -- |
 | @ConditionalOnBean | ...the specified bean has been configured |
 | @ConditionalOnMissingBean | ...the specified bean has not already been configured |
