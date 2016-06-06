@@ -192,3 +192,7 @@ server:
 ```
 
 这里key-store的位置，可以用file://来指定文件系统的位置（比如file:///Users/coldcutter/mykeys.jks），但是如果keystore文件被打包进了JAR包，得用classpath:来引用它。
+
+**配置Log**
+
+Spring Boot默认使用Logback，打日志到控制台，日志级别为INFO。
