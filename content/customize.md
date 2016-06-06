@@ -250,3 +250,5 @@ logging:
   path: /var/logs/
   file: BookWorm.log
 ```
+
+配置log配置文件的位置，一般就用默认的logback.xml好了，不过当你需要根据不同的profile使用不同的日志配置时会很有用：
