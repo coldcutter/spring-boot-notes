@@ -28,4 +28,4 @@ public class ReadingListServletInitializer extends SpringBootServletInitializer 
 }
 ```
 
-configure方法里source了一个配置类，这个配置类就是Spring Boot的主配置来和启动类。
+configure方法里source了一个配置类，这个配置类就是Spring Boot的主配置来和启动类，实际上更简洁的做法是让Application类继承SpringBootServletInitializer就好了。
