@@ -243,3 +243,10 @@ logging:
     org.springframework.security: DEBUG
 ```
 
+你还可以配置log的输出路径和文件（得确保应用有那个路径的写权限）：
+
+```
+logging:
+  path: /var/logs/
+  file: BookWorm.log
+```
