@@ -204,3 +204,5 @@ configurations {
 
 compile("org.springframework.boot:spring-boot-starter-log4j")
 ```
+
+想进一步配置log，可以在classpath根路径下（src/main/resources）创建一个logback.xml
