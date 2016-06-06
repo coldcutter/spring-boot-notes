@@ -234,3 +234,4 @@ logging:
         security: DEBUG
 ```
 
+把root的日志级别设为WARN，Spring Security的日志级别设为DEBUG
