@@ -195,7 +195,7 @@ server:
 
 **配置Log**
 
-Spring Boot默认使用Logback，打日志到控制台，日志级别为INFO，如果你不想使用Logback，可以这么配置：
+Spring Boot默认使用Logback，打日志到控制台，日志级别为INFO，如果你不想使用Logback（使用log4j），可以这么配置：
 
 ```
 configurations {
