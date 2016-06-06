@@ -222,3 +222,15 @@ compile("org.springframework.boot:spring-boot-starter-log4j")
   </root>
 </configuration>
 ```
+
+尽管如此，我们常见的对于log的配置无非就是修改日志级别和日志打到什么地方，我们可以借助Spring Boot的配置属性（不用创建logback.xml），配置日志级别：
+
+```
+logging:
+  level:
+    root: WARN
+    org:
+      springframework:
+        security: DEBUG
+```
+
