@@ -205,4 +205,20 @@ configurations {
 compile("org.springframework.boot:spring-boot-starter-log4j")
 ```
 
-想进一步配置log，可以在classpath根路径下（src/main/resources）创建一个logback.xml
+想进一步配置log，可以在classpath根路径下（src/main/resources）创建一个logback.xml，例子：
+
+```
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+  <logger name="root" level="INFO"/>
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
+```
