@@ -29,3 +29,15 @@ public class ReadingListServletInitializer extends SpringBootServletInitializer 
 ```
 
 configure方法里source了一个配置类，这个配置类就是Spring Boot的主配置来和启动类，实际上更简洁的做法是让Application类继承SpringBootServletInitializer就好了。
+
+然后构建：
+
+```
+gradle build
+```
+
+war包就会在build/libs下面了，把它部署到Tomcat服务器就好了，当然，你仍然可以用java -jar运行：
+
+```
+java -jar readinglist-0.0.1-SNAPSHOT.war
+```
