@@ -234,4 +234,12 @@ logging:
         security: DEBUG
 ```
 
-把root的日志级别设为WARN，Spring Security的日志级别设为DEBUG
+把root的日志级别设为WARN，Spring Security的日志级别设为DEBUG，你可以把Spring Security的包名写在一行：
+
+```
+logging:
+  level:
+    root: WARN
+    org.springframework.security: DEBUG
+```
+
