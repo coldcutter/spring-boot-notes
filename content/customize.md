@@ -277,3 +277,11 @@ driver-class-name其实没有必要，Spring Boot会根据url来推断。Spring 
 * HikariCP
 * Commons DBCP
 * Commons DBCP 2
+
+还可以通过JNDI：
+
+```
+spring:
+  datasource:
+    jndi-name: java:/comp/env/jdbc/readingListDS
+```
