@@ -261,3 +261,15 @@ logging:
 
 **配置数据源**
 
+比如MySQL，这么配：
+
+```
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/readinglist
+    username: dbuser
+    password: dbpass
+    driver-class-name: com.mysql.jdbc.Driver
+```
+
+driver-class-name其实没有必要，Spring Boot会根据url来推断。
