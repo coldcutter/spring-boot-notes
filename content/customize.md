@@ -285,3 +285,5 @@ spring:
   datasource:
     jndi-name: java:/comp/env/jdbc/readingListDS
 ```
+
+如果你设置了spring.datasource.jndi-name属性，其他datasource连接属性会被忽略。
