@@ -272,4 +272,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 ```
 
-driver-class-name其实没有必要，Spring Boot会根据url来推断。
+driver-class-name其实没有必要，Spring Boot会根据url来推断。Spring Boot会使用这些配置来自动配置DataSource bean，DataSource会被池化，如果Tomcat的pooling DataSource在classpath下，就用它，否则会使用其他连接池实现：
+
+* HikariCP
+* Commons DBCP
+* Commons DBCP 2
