@@ -287,3 +287,6 @@ spring:
 ```
 
 如果你设置了spring.datasource.jndi-name属性，其他datasource连接属性会被忽略。
+
+**配置自己的组件**
+
