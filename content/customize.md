@@ -339,3 +339,5 @@ public class AmazonProperties {
 不同的环境需要不同的属性，Spring 3.1引入了基于profile的配置，profiles其实就是一种条件配置，根据运行时哪些profiles被激活来决定使用或忽略哪些beans和配置类，比如可以加注解@Profile("production")表示只在production profile激活的时候才应用配置。你可以使用spring.profiles.active来配置激活哪些profiles。
 
 Spring Boot提供了基于profile的属性配置，更加方便。
+
+如果你使用properties文件，你可以创建特定profile的配置文件，文件格式为：“application-{profile}.properties”
