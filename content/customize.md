@@ -375,3 +375,4 @@ Spring Boot默认提供一个“whitelabel”错误页，默认的错误处理�
 * 如果是FreeMarker，则为error.ftl
 * 如果是Velocity，则为error.vm
 * 如果是JSP，则为error.jsp
+
