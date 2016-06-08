@@ -367,3 +367,11 @@ logging:
 不同的配置section用“---”分隔。
 
 ## 3.3 自定义错误页面
+
+Spring Boot默认提供一个“whitelabel”错误页，默认的错误处理器会寻找一个名为“error”的视图，如果没找到，就使用默认错误页，这个视图根本上是由视图解析器决定的：
+
+* bean id是“error”且实现了Spring View接口的bean（Spring的BeanNameViewResolver）
+* 如果是Thymeleaf，则为error.html
+* 如果是FreeMarker，则为error.ftl
+* 如果是Velocity，则为error.vm
+* 如果是JSP，则为error.jsp
