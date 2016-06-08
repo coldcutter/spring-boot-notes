@@ -304,6 +304,6 @@ public class ReadingListController {
     this.associateId = associateId;
   }
   
-  // ommited
+  // omitted
 }
 ```
