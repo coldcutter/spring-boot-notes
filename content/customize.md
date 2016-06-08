@@ -342,3 +342,17 @@ Spring Boot提供了基于profile的属性配置，更加方便。
 
 如果你使用properties文件，你可以创建特定profile的配置文件，文件格式为：“application-{profile}.properties”，比如dev环境的属性可以放在application-dev.properties文件里，prod环境的属性放在application-prod.properties文件里，同时，不与特定profile有关的（default）属性还是放在application.properties文件里。
 
+如果你是用YAML配置文件，你一样可以按照上面的文件命名方式来配置，不过你还有一中选择，就是把所有profile的属性都配置在一个application.yml文件里，比如：
+
+```
+logging:
+  level:
+    root: INFO
+---
+spring:
+  profiles: development
+logging:
+  level:
+    root: DEBUG
+---
+```
