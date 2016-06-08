@@ -355,4 +355,11 @@ logging:
   level:
     root: DEBUG
 ---
+spring:
+  profiles: production
+logging:
+  path: /tmp/
+  file: BookWorm.log
+  level:
+    root: WARN
 ```
