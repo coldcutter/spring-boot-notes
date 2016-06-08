@@ -396,3 +396,14 @@ Spring Boot默认提供一个“whitelabel”错误页，默认的错误处理�
 </html>
 ```
 
+我们可以在error模板中直接使用如下信息：
+
+* timestamp，错误发生的时间
+* status，HTTP状态码
+* error，错误原因
+* exception，异常的类名
+* message，异常消息
+* errors，BindingResult异常的errors
+* trace，异常堆栈追踪
+* path，错误发生的URL路径
+
