@@ -363,3 +363,5 @@ logging:
   level:
     root: WARN
 ```
+
+不同的配置section用“---”分隔。
