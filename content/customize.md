@@ -341,3 +341,4 @@ public class AmazonProperties {
 Spring Boot提供了基于profile的属性配置，更加方便。
 
 如果你使用properties文件，你可以创建特定profile的配置文件，文件格式为：“application-{profile}.properties”，比如dev环境的属性可以放在application-dev.properties文件里，prod环境的属性放在application-prod.properties文件里，同时，不与特定profile有关的（default）属性还是放在application.properties文件里。
+
