@@ -376,3 +376,23 @@ Spring Boot默认提供一个“whitelabel”错误页，默认的错误处理�
 * 如果是Velocity，则为error.vm
 * 如果是JSP，则为error.jsp
 
+比如Thymeleaf，我们在src/main/resources/templates下创建一个error.html：
+
+```
+<html>
+  <head>
+    <title>Oops!</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+  </head>
+  <body>
+    <div class="errorPage">
+      <span class="oops">Oops!</span><br/>
+      <img th:src="@{/MissingPage.png}"></img>
+      <p>There seems to be a problem with the page you requested
+         (<span th:text="${path}"></span>).</p>
+      <p th:text="${'Details: ' + message}"></p>
+    </div>
+  </body>
+</html>
+```
+
