@@ -309,3 +309,4 @@ public class ReadingListController {
 ```
 
 这样这个associateId（前缀amazon）属性会通过setter方法注入进来，Spring Boot的属性解析器足够智能，配置属性的时候驼峰（amazon.associateId）、连字符（amazon.associate-id）、下划线（amazon.associate_id）都可以。
+
