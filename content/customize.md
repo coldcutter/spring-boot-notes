@@ -336,3 +336,4 @@ public class AmazonProperties {
 
 **配置profiles**
 
+不同的环境需要不同的属性，Spring 3.1引入了基于profile的配置，profiles其实就是一种条件配置，根据运行时哪些profiles被激活来决定使用或忽略哪些beans和配置类，比如可以加注解@Profile("production")表示只在production profile激活的时候才应用配置。
