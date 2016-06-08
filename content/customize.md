@@ -290,3 +290,20 @@ spring:
 
 **配置自己的组件**
 
+你可以在某个bean上加上@ConfigurationProperties注解来注入自定义的属性，比如：
+
+```
+@Controller
+@RequestMapping("/")
+@ConfigurationProperties(prefix="amazon")
+public class ReadingListController {
+
+  private String associateId;
+  
+  public void setAssociateId(String associateId) {
+    this.associateId = associateId;
+  }
+  
+  // ommited
+}
+```
