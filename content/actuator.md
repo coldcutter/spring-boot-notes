@@ -11,5 +11,6 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /env | Retrieves all environment properties. |
 | GET | /env/{name} | Retrieves a specific environment value by name. |
 | GET | /health | Reports health metrics for the application, as provided by HealthIndicator implementations. |
-| 0:9 | 1:9 | 2:9 |
-| 0:10 | 1:10 | 2:10 |
+| GET | /info | Retrieves custom information about the application, as pro- vided by any properties prefixed with info. |
+| GET | /mappings | Describes all URI paths and how they’re mapped to control- lers (including Actuator endpoints).
+ |
