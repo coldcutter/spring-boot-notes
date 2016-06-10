@@ -1,5 +1,11 @@
 # 7. Actuator
 
+启用Actuator，你只要在build.gradle中加入：
+
+```
+compile 'org.springframework.boot:spring-boot-starter-actuator'
+```
+
 Spring Boot Actuator提供了一系列RESTful接口：
 
 | HTTP方法 | 路径 | 描述 |
@@ -17,4 +23,3 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /metrics/{name} | Reports an individual application metric by name. |
 | POST | /shutdown | Shuts down the application; requires that endpoints.shutdown.enabled be set to true. |
 | GET | /trace | Provides basic trace information (timestamp, headers, and so on) for HTTP requests. |
-
