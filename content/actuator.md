@@ -26,3 +26,4 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 这些信息主要分为三类：配置（configuration）、指标（metrics）、其他（miscellaneous）。
 
+## 7.1 配置相关
