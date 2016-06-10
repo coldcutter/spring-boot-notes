@@ -4,10 +4,10 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 | HTTP方法 | 路径 | 描述 |
 | -- | -- | -- |
-| GET | /autoconfig | 自动配置信息 |
-| 0:3 | 1:3 | 2:3 |
-| 0:4 | 1:4 | 2:4 |
-| 0:5 | 1:5 | 2:5 |
+| GET | /autoconfig | Provides an auto-configuration report describing what auto- configuration conditions passed and failed. |
+| GET | /configprops | Describes how beans have been injected with configuration properties (including default values). |
+| GET | /beans | Describes all beans in the application context and their relationship to each other. |
+| GET | /dump | Retrieves a snapshot dump of thread activity. |
 | 0:6 | 1:6 | 2:6 |
 | 0:7 | 1:7 | 2:7 |
 | 0:8 | 1:8 | 2:8 |
