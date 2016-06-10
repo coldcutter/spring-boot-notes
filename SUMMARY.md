@@ -5,5 +5,5 @@
 * [2. 开发第一个应用](content/project.md)
 * [3. 自定义配置](content/customize.md)
 * [8. 部署](content/deploy.md)
-* Actuator
+* [Actuator](content/actuator.md)
 
