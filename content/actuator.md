@@ -67,3 +67,13 @@ curl -X POST http://localhost:8080/shutdown
 ```
 
 显然，关闭应用是危险的行为，因此/shutdown默认是不启用的，你需要设置endpoints.shutdown.enabled为true才能开启，同时你应该注意/shutdown接口的权限。
+
+/info接口返回应用的信息，默认返回空的JSON对象（{}），你通过配置info打头的属性来添加更多返回：
+
+```
+info:
+  contact:
+    email: support@myreadinglist.com
+    phone: 1-888-555-1971
+```
+
