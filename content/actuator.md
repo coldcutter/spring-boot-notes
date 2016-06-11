@@ -48,7 +48,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 /health接口返回各种健康指标：
 
-| 健康指标 | 键 | 描述 |
+| Health indicator | Key | Reports |
 | -- | -- | -- |
 | ApplicationHealthIndicator | 无 | 总是“UP” |
 | DataSourceHealthIndicator | db | “UP” and database type if the database can be contacted; “DOWN” status otherwise |
