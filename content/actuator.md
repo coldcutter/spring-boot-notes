@@ -24,7 +24,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | POST | /shutdown | Shuts down the application; requires that endpoints.shutdown.enabled be set to true. |
 | GET | /trace | Provides basic trace information (timestamp, headers, and so on) for HTTP requests. |
 
-这些信息主要分为三类：配置（configuration）、指标（metrics）、其他（miscellaneous）。
+这些信息主要分为三类：配置（configuration）、指标（metrics）、其他（miscellaneous）。为了安全，任何名字或者名字最后部分是“password”、“secret”或者“key”的属性，都会被打星显示
 
 ## 7.1 配置信息
 
