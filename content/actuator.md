@@ -28,4 +28,4 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 ## 7.1 配置信息
 
-Spring应用的一大问题就是你不太清楚有哪些bean以及它们的注入关系，特别是当你使用了Spring Boot自动配置以后，不过有了Actuator，你可以用/beans获得一份bean清单：
+包括/beans、/autoconfig、/env、/env/{name}、/configprops
