@@ -18,11 +18,11 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /mappings | URI路径到控制器的映射 |
 | GET | /metrics | 各种指标 |
 | GET | /metrics/{name} | 根据名字检索指标 |
+| GET | /trace | 最近100条HTTP请求追踪（数据在内存里） |
 | GET | /dump | Retrieves a snapshot dump of thread activity. |
 | GET | /health | Reports health metrics for the application, as provided by HealthIndicator implementations. |
 | GET | /info | Retrieves custom information about the application, as provided by any properties prefixed with info. |
 | POST | /shutdown | Shuts down the application; requires that endpoints.shutdown.enabled be set to true. |
-| GET | /trace | Provides basic trace information (timestamp, headers, and so on) for HTTP requests. |
 
 这些信息主要分为三类：配置（configuration）、指标（metrics）、其他（miscellaneous）。为了安全，任何名字或者名字最后部分是“password”、“secret”或者“key”的属性，都会被打星显示。
 
