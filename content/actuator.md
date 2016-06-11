@@ -52,8 +52,8 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | -- | -- | -- |
 | ApplicationHealthIndicator | none | Always “UP” |
 | DataSourceHealthIndicator | db | “UP” and database type if the database can be contacted; “DOWN” status otherwise |
-| DiskSpaceHealthIndicator | diskSpace | “UP” and available disk space, and “UP” if avail- able space is above a threshold; “DOWN” if there isn’t enough disk space |
-| JmsHealthIndicator | jms | “UP” and JMS provider name if the message bro- ker can be contacted; “DOWN” otherwise |
+| DiskSpaceHealthIndicator | diskSpace | “UP” and available disk space, and “UP” if available space is above a threshold; “DOWN” if there isn’t enough disk space |
+| JmsHealthIndicator | jms | “UP” and JMS provider name if the message broker can be contacted; “DOWN” otherwise |
 | MailHealthIndicator | mail | “UP” and the mail server host and port if the mail server can be contacted; “DOWN” otherwise |
 | MongoHealthIndicator | mongo | “UP” and the MongoDB server version; “DOWN” otherwise |
 | RabbitHealthIndicator | rabbit | “UP” and the RabbitMQ broker version; “DOWN” otherwise |
