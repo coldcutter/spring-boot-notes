@@ -45,3 +45,6 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | 数据源 | datasource.* | 数据源连接数量 (from the data source’s metadata，仅当存在datasource bean时才有) |
 | HTTP会话 | httpsessions.* | 活跃的和最大的会话数量 (from the embedded Tomcat bean，仅当有内置服务器时才有) |
 | HTTP | counter.status.*，gauge.response.* | HTTP请求的各种度量和统计 |
+
+/health接口返回各种健康指标：
+
