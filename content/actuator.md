@@ -79,3 +79,15 @@ info:
 
 ## 7.3 Remote Shell
 
+Spring Boot集成了CRaSH（可内置在Java应用中的shell），并提供了一系列命令，首先加入依赖：
+
+```
+compile("org.springframework.boot:spring-boot-starter-remote-shell")
+```
+
+然后待应用起来之后，你可以使用SSH连上去（端口2000）：
+
+```
+ssh user@localhost -p 2000
+```
+
