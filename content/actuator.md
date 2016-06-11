@@ -50,7 +50,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 | Health indicator | Key | Reports |
 | -- | -- | -- |
-| ApplicationHealthIndicator | 无 | 总是“UP” |
+| ApplicationHealthIndicator | none | Always “UP” |
 | DataSourceHealthIndicator | db | “UP” and database type if the database can be contacted; “DOWN” status otherwise |
 | DiskSpaceHealthIndicator | diskSpace | “UP” and available disk space, and “UP” if avail- able space is above a threshold; “DOWN” if there isn’t enough disk space |
 | JmsHealthIndicator | jms | “UP” and JMS provider name if the message bro- ker can be contacted; “DOWN” otherwise |
