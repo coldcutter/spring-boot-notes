@@ -14,7 +14,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /configprops | Describes how beans have been injected with configuration properties (including default values). |
 | GET | /beans | Spring应用上下文中所有bean以及它们之间的依赖关系。 |
 | GET | /dump | Retrieves a snapshot dump of thread activity. |
-| GET | /env | Retrieves all environment properties. |
+| GET | /env | 各种环境属性 |
 | GET | /env/{name} | Retrieves a specific environment value by name. |
 | GET | /health | Reports health metrics for the application, as provided by HealthIndicator implementations. |
 | GET | /info | Retrieves custom information about the application, as provided by any properties prefixed with info. |
