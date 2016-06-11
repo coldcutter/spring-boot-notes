@@ -77,3 +77,5 @@ info:
     phone: 1-888-555-1971
 ```
 
+## 7.3 Remote Shell
+
