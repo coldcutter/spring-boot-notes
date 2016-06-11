@@ -36,4 +36,4 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 | 分类 | 前缀 | 描述 |
 | -- | -- | -- |
-| 垃圾收集器 | gc.* | 2:2 |
+| 垃圾收集器 | gc.* | mark-sweep和scavenge垃圾收集器的垃圾收集计数和持续时间（来自 java.lang.management.GarbageCollectorMXBean） |
