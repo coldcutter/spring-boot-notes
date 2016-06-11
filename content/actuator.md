@@ -85,7 +85,7 @@ Spring Boot集成了CRaSH（可内置在Java应用中的shell），并提供了�
 compile("org.springframework.boot:spring-boot-starter-remote-shell")
 ```
 
-然后待应用起来之后，你可以使用SSH连上去（端口2000）：
+然后待应用起来之后，你可以使用SSH连上去（端口2000），密码就是log里打印出来的那串随机密码：
 
 ```
 ssh user@localhost -p 2000
