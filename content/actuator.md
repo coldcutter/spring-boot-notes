@@ -43,5 +43,5 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | 系统 | processors，uptime，instance.uptime，systemload.average | 处理器数量 (from java.lang.Runtime)，运行时间 (from java.lang.management.RuntimeMXBean)，平均系统负载 (from java.lang.management.OperatingSystemMXBean) |
 | 线程池 | threads.* | 线程、守护线程的数量，以及JVM启动以来的线程峰值 (from java.lang.management.ThreadMXBean) |
 | 数据源 | datasource.* | 数据源连接数量 (from the data source’s metadata，仅当存在datasource bean时才有) |
-| Tomcat会话 | httpsessions.* | |
+| HTTP会话 | httpsessions.* | The active and maximum number of sessions in Tomcat (from the embedded Tomcat bean and only available if the application is served via an embedded Tomcat server) |
 | HTTP | counter.status.*，gauge.response.* | |
