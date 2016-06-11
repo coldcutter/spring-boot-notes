@@ -31,3 +31,6 @@ Spring Boot Actuator提供了一系列RESTful接口：
 包括/beans、/autoconfig、/env、/env/{name}、/configprops、/mappings
 
 ## 7.2 指标信息
+
+/metrics接口返回各种指标，按照前缀分类：
+
