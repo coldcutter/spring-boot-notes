@@ -41,7 +41,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | 堆 | heap.* | 当前内存使用 (from java.lang .management.MemoryUsage) |
 | 类加载器 | classes.* | JVM类加载器加载和未加载的类数量  (from java.lang.management.ClassLoadingMXBean) |
 | 系统 | processors，uptime，instance.uptime，systemload.average | 处理器数量 (from java.lang.Runtime)，运行时间 (from java.lang.management.RuntimeMXBean)，平均系统负载 (from java.lang.management.OperatingSystemMXBean) |
-| 线程池 | threads.* | |
+| 线程池 | threads.* | 线程、守护线程的数量，以及JVM启动以来的线程峰值 (from java.lang .management.ThreadMXBean) |
 | 数据源 | datasource.* | |
 | Tomcat会话 | httpsessions.* | |
 | HTTP | counter.status.*，gauge.response.* | |
