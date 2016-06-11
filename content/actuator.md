@@ -91,3 +91,29 @@ compile("org.springframework.boot:spring-boot-starter-remote-shell")
 ssh user@localhost -p 2000
 ```
 
+可以使用由Spring Boot提供的命令：autoconfig、beans、metrics（可以看到动态更新，Ctrl-C退出），但是并不是每个Web接口都有对应的命令，这时候你需要endpoint命令：
+
+```
+endpoint list
+```
+
+这会返回endpoint列表，不过不是url，而是它们的bean name：
+
+```
+requestMappingEndpoint
+environmentEndpoint
+healthEndpoint
+beansEndpoint
+infoEndpoint
+metricsEndpoint
+traceEndpoint
+dumpEndpoint
+autoConfigurationReportEndpoint
+configurationPropertiesReportEndpoint
+```
+
+然后使用endpoint invoke命令（去掉“Endpoint”后缀）：
+
+```
+endpoint invoke health
+```
