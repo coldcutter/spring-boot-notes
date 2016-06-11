@@ -17,7 +17,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /configprops | 各种配置属性 |
 | GET | /mappings | URI路径到控制器的映射 |
 | GET | /metrics | 各种指标 |
-| GET | /metrics/{name} | Reports an individual application metric by name. |
+| GET | /metrics/{name} | 根据名字检索指标 |
 | GET | /dump | Retrieves a snapshot dump of thread activity. |
 | GET | /health | Reports health metrics for the application, as provided by HealthIndicator implementations. |
 | GET | /info | Retrieves custom information about the application, as provided by any properties prefixed with info. |
