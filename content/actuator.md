@@ -36,5 +36,5 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 | 分类 | 前缀 | 描述 |
 | -- | -- | -- |
-| 垃圾收集器 | gc.* | mark-sweep和scavenge垃圾收集器的垃圾收集计数和持续时间（from java.lang.management.GarbageCollectorMXBean） |
+| 垃圾收集器 | gc.* | mark-sweep和scavenge垃圾收集器的垃圾收集计数和持续时间 (from java.lang.management.GarbageCollectorMXBean) |
 | 内存 | mem.* | 分配给应用的内存和空闲的内存 (from java.lang.Runtime) |
