@@ -65,3 +65,5 @@ Spring Boot Actuator提供了一系列RESTful接口：
 ```
 curl -X POST http://localhost:8080/shutdown
 ```
+
+显然，关闭应用是危险的行为，因此/shutdown默认是不启用的，你需要设置endpoints.shutdown.enabled为true才能开启。
