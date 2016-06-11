@@ -60,3 +60,8 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | RedisHealthIndicator | redis | “UP” and the Redis server version; “DOWN” otherwise |
 | SolrHealthIndicator | solr | “UP” if the Solr server can be contacted; “DOWN” otherwise |
 
+假设你需要关闭你的应用，比如在微服务架构中，你需要优雅地关闭其中一个应用实例，你可以这样：
+
+```
+curl -X POST http://localhost:8080/shutdown
+```
