@@ -10,12 +10,12 @@ Spring Boot Actuator提供了一系列RESTful接口：
 
 | HTTP方法 | 路径 | 描述 |
 | -- | -- | -- |
+| GET | /beans | Spring应用上下文中所有bean以及它们之间的依赖关系 |
 | GET | /autoconfig | 自动配置报告，哪些自动配置生效或无效 |
-| GET | /configprops | 各种配置属性 |
-| GET | /beans | Spring应用上下文中所有bean以及它们之间的依赖关系。 |
-| GET | /dump | Retrieves a snapshot dump of thread activity. |
 | GET | /env | 各种环境属性 |
 | GET | /env/{name} | 根据名字检索环境属性 |
+| GET | /configprops | 各种配置属性 |
+| GET | /dump | Retrieves a snapshot dump of thread activity. |
 | GET | /health | Reports health metrics for the application, as provided by HealthIndicator implementations. |
 | GET | /info | Retrieves custom information about the application, as provided by any properties prefixed with info. |
 | GET | /mappings | Describes all URI paths and how they’re mapped to controllers (including Actuator endpoints). |
