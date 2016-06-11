@@ -22,7 +22,7 @@ Spring Boot Actuator提供了一系列RESTful接口：
 | GET | /dump | 线程活动的快照 |
 | GET | /health | 应用健康指标，由HealthIndicator接口的实现提供 |
 | POST | /shutdown | 关闭应用 |
-| GET | /info | Retrieves custom information about the application, as provided by any properties prefixed with info. |
+| GET | /info | 提供关于应用的自定义信息 |
 
 这些信息主要分为三类：配置（configuration）、指标（metrics）、其他（miscellaneous）。为了安全，任何名字或者名字最后部分是“password”、“secret”或者“key”的属性，都会被打星显示。
 
