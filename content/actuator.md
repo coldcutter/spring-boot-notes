@@ -119,3 +119,5 @@ endpoint invoke health
 ```
 
 ## 7.4 自定义
+
+### 7.4.1 修改endpoint IDs
