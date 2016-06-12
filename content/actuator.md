@@ -118,4 +118,4 @@ configurationPropertiesReportEndpoint
 endpoint invoke health
 ```
 
-## 7.4 使用JMX
+## 7.4 自定义
