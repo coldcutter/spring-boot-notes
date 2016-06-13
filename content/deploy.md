@@ -76,3 +76,6 @@ compile("org.flywaydb:flyway-core")
 ```
 
 当你启动应用的时候，flyway会根据schema_version表（会自动创建）中的脚本执行记录来执行db/migration中的脚本。
+
+**使用Liquibase**
+
