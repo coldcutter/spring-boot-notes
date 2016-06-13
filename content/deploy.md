@@ -69,6 +69,10 @@ export SPRING_PROFILES_ACTIVE=prod
 
 **使用Flyway**
 
-使用SQL编写脚本，脚本都有版本号，Flyway会按顺序自动执行这些脚本，并将执行状态记录到数据库中防止重复执行。把脚本放在classpath根路径的/db/migration目录下（src/main/resources/db/migration），脚本命名方式是大写的“V”打头+一个版本号+双下划线+描述脚本用途的名字.sql，如V1\_\_init.sql，当然你需要设置spring.jpa.hibernate.ddl-auto为none使得Hibernate不会自动创建表。
+使用SQL编写脚本，脚本都有版本号，Flyway会按顺序自动执行这些脚本，并将执行状态记录到数据库中防止重复执行。把脚本放在classpath根路径的/db/migration目录下（src/main/resources/db/migration），脚本命名方式是大写的“V”打头+一个版本号+双下划线+描述脚本用途的名字.sql，如V1\_\_init.sql，当然你需要设置spring.jpa.hibernate.ddl-auto为none使得Hibernate不会自动创建表，最后引入flyway包即可：
+
+```
+compile("org.flywaydb:flyway-core")
+```
 
 
