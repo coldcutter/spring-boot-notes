@@ -56,7 +56,7 @@ spring:
     password: ${MYSQL_PASSWORD}
 ```
 
-用户名和密码可以设置在系统环境变量里，防止密码暴露在代码里，要启用这段配置，要设置spring.profiles.active为prod，一般设置环境变量比较方便：
+用户名和密码可以设置在系统环境变量里，防止密码暴露在代码里，要启用这段配置，要设置spring.profiles.active为prod，比较方便的做法是设置环境变量：
 
 ```
 export SPRING_PROFILES_ACTIVE=prod
