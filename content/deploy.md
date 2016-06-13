@@ -69,6 +69,6 @@ export SPRING_PROFILES_ACTIVE=prod
 
 **使用Flyway**
 
-
+使用SQL编写脚本，脚本都有版本号，Flyway会按顺序自动执行这些脚本，并将执行状态记录到数据库中防止重复执行。
 
 
