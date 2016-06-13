@@ -62,4 +62,4 @@ spring:
 export SPRING_PROFILES_ACTIVE=prod
 ```
 
-如果你使用Hibernate（JPA）和内置的H2数据库，Spring Boot会默认配置Hibernate自动创建数据库表，更具体地，它会设置Hibernate的hibernate.hbm2ddl.auto为create-drop，表明当Hibernate的SessionFactory创建完之后创建表，关闭的时候删除表。不过如果不使用内置的H2数据库，Spring Boot什么也不会做，表不会被创建，因此查询数据库的时候会报错，所以你要显示设置spring.jpa.hibernate.ddl-auto为create，create-drop或update，尽管设置为update看起来不错，不过在生产中并不推荐这么做。
+如果你使用Hibernate（JPA）和内置的H2数据库，Spring Boot会默认配置Hibernate自动创建数据库表，更具体地，它会设置Hibernate的hibernate.hbm2ddl.auto为create-drop，表明当Hibernate的SessionFactory创建完之后创建表，关闭的时候删除表。不过如果不使用内置的H2数据库，Spring Boot什么也不会做，表不会被创建，因此查询数据库的时候会报错，所以你要显示设置spring.jpa.hibernate.ddl-auto为create，create-drop或update，尽管设置为update看起来不错，不过在生产中并不推荐这么做，更好的做法是使用数据库迁移工具
