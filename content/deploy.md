@@ -44,3 +44,17 @@ java -jar readinglist-0.0.1-SNAPSHOT.war
 
 ## 8.2 生产数据库
 
+开发的时候我们可以用自动配置的内置H2数据库，不过生产环境你就得用MySQL这样的数据库了：
+
+```
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5432/readinglist
+    username: habuma
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+```
+
