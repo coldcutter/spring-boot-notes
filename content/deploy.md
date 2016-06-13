@@ -51,10 +51,8 @@ java -jar readinglist-0.0.1-SNAPSHOT.war
 spring:
   profiles: prod
   datasource:
-    url: jdbc:postgresql://localhost:5432/readinglist
+    url: jdbc:mysql://localhost:3306/readinglist?useUnicode=true&characterEncoding=utf8
     username: habuma
     password: password
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
 ```
 
