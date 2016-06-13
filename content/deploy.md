@@ -52,7 +52,7 @@ spring:
   profiles: prod
   datasource:
     url: jdbc:mysql://localhost:3306/readinglist?useUnicode=true&characterEncoding=utf8
-    username: habuma
-    password: password
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
 ```
 
