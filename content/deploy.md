@@ -85,3 +85,9 @@ compile("org.flywaydb:flyway-core")
 compile("org.liquibase:liquibase-core")
 ```
 
+默认情况下，liquibase的所有迁移脚本都写在/db/changelog目录下的db.changelog-master.yaml文件里，里面的每一块changeSet都有一个唯一id（不一定要是数字，任何文本都可以），脚本执行历史保存在databaseChangeLog表中，你可以修改默认的脚本位置：
+
+```
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.xml
+```
