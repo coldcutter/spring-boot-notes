@@ -79,3 +79,9 @@ compile("org.flywaydb:flyway-core")
 
 **使用Liquibase**
 
+虽然Flyway用起来非常简单，不过用SQL脚本导致换一种数据库就无法工作了，Liquibase提供多种格式来编写脚本，包括XML、YAML和JSON，当然了，SQL也是支持的，引入Liquibase包：
+
+```
+compile("org.liquibase:liquibase-core")
+```
+
