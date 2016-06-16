@@ -130,7 +130,7 @@ endpoints:
     id: kill
 ```
 
-### 7.4.2 禁用（启用）
+### 7.4.2 禁用（启用）endpoints
 
 你还可以禁用某些endpoint：
 
