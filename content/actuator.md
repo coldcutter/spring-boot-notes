@@ -121,3 +121,12 @@ endpoint invoke health
 ## 7.4 自定义
 
 ### 7.4.1 修改endpoint IDs
+
+每个Actuator endpoint都有一个ID来决定路径，比如/beans的默认ID就是beans，通过修改endpoints.endpoint-id.id属性就能修改路径，比如修改/shutdown为/kill：
+
+```
+endpoints:
+  shutdown:
+    id: kill
+```
+
