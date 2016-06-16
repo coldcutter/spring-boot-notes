@@ -149,7 +149,7 @@ endpoints:
     enabled: true
 ```
 
-### 添加自定义metrics和gauges
+### 7.4.3 添加自定义metrics和gauges
 
 比如我们需要记录用户保存了几次书到reading list，以及最后一次保存的时间，并通过/metrics暴露出来，Actuator为我们自动配置了一个CounterService实例，帮助完成计数功能：
 
@@ -247,3 +247,6 @@ public class ApplicationContextMetrics implements PublicMetrics {
 ```
 
 spring.controllers为2，是因为统计了ReadingListController和Spring Boot提供的BasicErrorController。
+
+### 7.4.4 添加自定义trace repository
+
