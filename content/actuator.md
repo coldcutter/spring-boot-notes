@@ -130,3 +130,10 @@ endpoints:
     id: kill
 ```
 
+你还可以禁用某些endpoint：
+
+```
+endpoints:
+  metrics:
+    enabled: false
+```
