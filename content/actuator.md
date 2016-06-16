@@ -149,3 +149,4 @@ endpoints:
     enabled: true
 ```
 
+### 添加自定义metrics和gauges
