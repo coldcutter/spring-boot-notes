@@ -172,3 +172,19 @@ public interface GaugeService {
   void submit(String metricName, double value);
 }
 ```
+
+你只需要注入进来这两个bean，然后直接调用方法即可：
+
+```
+@RequestMapping(method = RequestMethod.POST)
+public String addToReadingList(Reader reader, Book book) {
+  
+  book.setReader(reader);
+  readingListRepository.save(book);
+  
+  counterService.increment("books.saved");
+  gaugeService.submit("books.last.saved", System.currentTimeMillis());
+  
+  return "redirect:/";
+}
+```
