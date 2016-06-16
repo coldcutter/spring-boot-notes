@@ -189,3 +189,13 @@ public String addToReadingList(Reader reader, Book book) {
 }
 ```
 
+对于稍微复杂点的metrics，上面那两个Service估计不够用了，这时候你可以实现PublicMetrics接口：
+
+```
+package org.springframework.boot.actuate.endpoint;
+
+public interface PublicMetrics {
+  Collection<Metric<?>> metrics();
+}
+```
+
