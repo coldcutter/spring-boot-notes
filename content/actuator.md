@@ -173,7 +173,7 @@ public interface GaugeService {
 }
 ```
 
-你只需要注入进来这两个bean，然后直接调用方法即可：
+你只需要注入这两个bean，然后直接调用方法即可：
 
 ```
 @RequestMapping(method = RequestMethod.POST)
