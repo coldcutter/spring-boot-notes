@@ -150,3 +150,25 @@ endpoints:
 ```
 
 ### 添加自定义metrics和gauges
+
+比如我们需要记录用户保存了几次书到reading list，以及最后一次保存的时间，并通过/metrics暴露出来，Actuator为我们自动配置了一个CounterService实例，帮助完成计数功能：
+
+```
+package org.springframework.boot.actuate.metrics;
+
+public interface CounterService {
+  void increment(String metricName);
+  void decrement(String metricName);
+  void reset(String metricName);
+}
+```
+
+还有一个GaugeService实例，帮助给一个指标设置一个值：
+
+```
+package org.springframework.boot.actuate.metrics;
+
+public interface GaugeService {
+  void submit(String metricName, double value);
+}
+```
