@@ -137,3 +137,12 @@ endpoints:
   metrics:
     enabled: false
 ```
+
+你可以禁用所有，并启用某些：
+
+```
+endpoints:
+  enabled: false
+  metrics:
+    enabled: true
+```
