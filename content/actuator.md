@@ -246,3 +246,4 @@ public class ApplicationContextMetrics implements PublicMetrics {
 }
 ```
 
+spring.controllers为2，是因为统计了ReadingListController和Spring Boot提供的BasicErrorController。
