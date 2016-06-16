@@ -230,3 +230,19 @@ public class ApplicationContextMetrics implements PublicMetrics {
   }
 }
 ```
+
+然后访问/metrics，就会显示我们自定义的指标：
+
+```
+{
+  ...
+  spring.context.startup-date: 1429398980443,
+  spring.beans.definitions: 261,
+  spring.beans: 272,
+  spring.controllers: 2,
+  books.count: 1,
+  gauge.books.save.time: 1429399793260,
+  ...
+}
+```
+
