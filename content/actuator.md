@@ -130,6 +130,8 @@ endpoints:
     id: kill
 ```
 
+### 7.4.2 禁用（启用）
+
 你还可以禁用某些endpoint：
 
 ```
@@ -146,3 +148,4 @@ endpoints:
   metrics:
     enabled: true
 ```
+
