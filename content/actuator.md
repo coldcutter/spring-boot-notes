@@ -271,3 +271,17 @@ public class ActuatorConfig {
   
 }
 ```
+
+虽然容量是增加了，但还是消耗内存，而且没有持久化，所以我们可以自己实现Spring Boot的TraceRepository接口：
+
+```
+package org.springframework.boot.actuate.trace;
+
+import java.util.List;
+import java.util.Map;
+
+public interface TraceRepository {
+  List<Trace> findAll();
+  void add(Map<String, Object> traceInfo);
+}
+```
