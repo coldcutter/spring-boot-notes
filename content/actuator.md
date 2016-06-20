@@ -288,3 +288,38 @@ public interface TraceRepository {
 
 比如实现存到MongoDB：
 
+```
+package readinglist;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.Trace;
+import org.springframework.boot.actuate.trace.TraceRepository;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MongoTraceRepository implements TraceRepository {
+
+  @Autowired
+  private MongoOperations mongoOps;
+  
+  @Override
+  public List<Trace> findAll() {
+    return mongoOps.findAll(Trace.class);
+  }
+  
+  @Override
+  public void add(Map<String, Object> traceInfo) {
+    mongoOps.save(new Trace(new Date(), traceInfo));
+  }
+}
+```
+
+你只要加入MongoDB的starter，就会自动配置好MongoOperations bean：
+
+```
+compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+```
+
