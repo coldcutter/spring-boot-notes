@@ -285,3 +285,6 @@ public interface TraceRepository {
   void add(Map<String, Object> traceInfo);
 }
 ```
+
+比如实现存到MongoDB：
+
