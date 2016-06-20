@@ -250,3 +250,22 @@ spring.controllers为2，是因为统计了ReadingListController和Spring Boot�
 
 ### 7.4.4 添加自定义trace repository
 
+/trace接口默认使用容量为100的内存repository，我们可以自己声明InMemoryTraceRepository bean，比如设置容量为1000：
+
+```
+package readinglist;
+
+import org.springframework.boot.actuate.trace.InMemoryTraceRepository;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ActuatorConfig {
+  @Bean
+  public InMemoryTraceRepository traceRepository() {
+    InMemoryTraceRepository traceRepo = new InMemoryTraceRepository();
+    traceRepo.setCapacity(1000);
+    return traceRepo;
+  }
+}
+```
