@@ -350,3 +350,10 @@ public class AmazonHealth implements HealthIndicator {
 }
 ```
 
+如果需要更详细的信息，可以调用withDetail()方法，比如把catch中的代码改成：
+
+```
+return Health.down().withDetail("reason", e.getMessage()).build();
+```
+
+## 7.5 Actuator接口安全
