@@ -323,3 +323,4 @@ public class MongoTraceRepository implements TraceRepository {
 compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 ```
 
+### 7.4.5 自定义健康指标
