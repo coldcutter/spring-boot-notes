@@ -349,3 +349,4 @@ public class AmazonHealth implements HealthIndicator {
   }
 }
 ```
+
