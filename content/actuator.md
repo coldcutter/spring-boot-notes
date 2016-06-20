@@ -324,3 +324,28 @@ compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 ```
 
 ### 7.4.5 自定义健康指标
+
+比如我们要添加一个检测Amazon能否访问的健康指标：
+
+```
+package readinglist;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.HealthIndicator;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+@Component
+public class AmazonHealth implements HealthIndicator {
+
+  @Override
+  public Health health() {
+    try {
+      RestTemplate rest = new RestTemplate();
+      rest.getForObject("http://www.amazon.com", String.class);
+      return Health.up().build();
+    } catch (Exception e) {
+      return Health.down().build();
+    }
+  }
+}
+```
