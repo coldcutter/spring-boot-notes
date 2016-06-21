@@ -357,3 +357,17 @@ return Health.down().withDetail("reason", e.getMessage()).build();
 ```
 
 ## 7.5 Actuator接口安全
+
+给Actuator路径加权限和一般的路径加权限是一样的，但是要用antMatchers把所有接口列一遍显然比较麻烦，所以可以配置一个公共的前缀：
+
+```
+management:
+  context-path: /mgmt
+```
+
+然后就在SecurityConfig.java中的configure()方法中加入：
+
+```
+.antMatchers("/mgmt/**").access("hasRole('ADMIN')")
+```
+
