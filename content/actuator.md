@@ -370,4 +370,3 @@ management:
 ```
 .antMatchers("/mgmt/**").access("hasRole('ADMIN')")
 ```
-
