@@ -148,3 +148,10 @@ public void homePage_unauthenticatedUser() throws Exception {
 
 * @WithMockUser——加载一个UserDetails，使用指定的用户名、密码和权限
 * @WithUserDetails——根据指定的用户名查找一个UserDetails对象并加载
+
+```
+@Test
+@WithMockUser(username="craig", password="password", roles="READER")
+public void homePage_authenticatedUser() throws Exception {
+... }
+```
