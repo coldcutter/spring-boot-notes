@@ -220,4 +220,41 @@ rest.getForObject("http://localhost:{port}/bogusPage", String.class, port);
 
 **使用Selenium测试HTML页面**
 
-[Selenium](http://www.seleniumhq.org/)启用浏览器来测试，就像手工测试一样，不过它可以自动化和重复执行。
+[Selenium](http://www.seleniumhq.org/)启用浏览器来测试，就像手工测试一样，不过它可以自动化和重复执行，首先添加包：
+
+```
+testCompile("org.seleniumhq.selenium:selenium-java:2.45.0")
+```
+
+测试样例：
+
+```
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes=ReadingListApplication.class)
+@WebIntegrationTest(randomPort=true)
+public class ServerWebTests {
+
+  private static FirefoxDriver browser;
+  
+  @Value("${local.server.port}")
+  private int port;
+  
+  @BeforeClass
+  public static void openBrowser() {
+    browser = new FirefoxDriver();
+    browser.manage().timeouts()
+        .implicitlyWait(10, TimeUnit.SECONDS);
+  }
+  
+  @AfterClass
+  public static void closeBrowser() {
+    browser.quit();
+  }
+  
+  @Test
+  public void addBookToEmptyList() {
+    String baseUrl = "http://localhost:" + port;
+    browser.get(baseUrl);
+    assertEquals("You have no books in your book list", browser.findElementByTagName("div").getText());
+}
+```
