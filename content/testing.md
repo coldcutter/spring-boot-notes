@@ -24,3 +24,8 @@ SpringJUnit4ClassRunner类用来启用Spring集成测试，它是一个加载Spr
 不过Spring Boot应用是由SpringApplication加载的（或SpringBootServletInitializer），它不仅加载应用上下文，还启用日志，加载外部配置文件等Spring Boot特性，但是如果使用@ContextConfiguration，这些特性是没有的，所以一般是使用Spring Boot的@SpringApplicationConfiguration来替换@ContextConfiguration，它会像SpringApplication那样。
 
 ## 4.2 测试Web应用
+
+测试Web应用，有两个选择：
+
+1. Spring Mock MVC——模拟一个Servlet容器来测试Controller
+2. Web集成测试——在内置Servlet容器（Tomcat或Jetty）中启动应用来测试
