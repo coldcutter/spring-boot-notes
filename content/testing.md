@@ -121,3 +121,14 @@ public void postBook() throws Exception {
 testCompile("org.springframework.security:spring-security-test")
 ```
 
+然后：
+
+```
+@Before
+public void setupMockMvc() {
+  mockMvc = MockMvcBuilders
+      .webAppContextSetup(webContext)
+      .apply(springSecurity())
+      .build();
+}
+```
