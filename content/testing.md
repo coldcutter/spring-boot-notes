@@ -29,3 +29,25 @@ SpringJUnit4ClassRunner类用来启用Spring集成测试，它是一个加载Spr
 
 1. Spring Mock MVC——模拟一个Servlet容器来测试Controller
 2. Web集成测试——在内置Servlet容器（Tomcat或Jetty）中启动应用来测试
+
+**Spring Mock MVC**
+
+```
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = ReadingListApplication.class)
+@WebAppConfiguration
+public class MockMvcWebTests {
+  
+  @Autowired
+  private WebApplicationContext webContext;
+  
+  private MockMvc mockMvc;
+  
+  @Before
+  public void setupMockMvc() {
+    mockMvc = MockMvcBuilders
+        .webAppContextSetup(webContext)
+        .build();
+  }
+}
+```
