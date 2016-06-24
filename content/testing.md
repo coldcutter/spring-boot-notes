@@ -132,3 +132,5 @@ public void setupMockMvc() {
       .build();
 }
 ```
+
+springSecurity()是SecurityMockMvcConfigurers的一个静态方法，它会遵照你的安全配置。
