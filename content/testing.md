@@ -55,6 +55,10 @@ public class MockMvcWebTests {
 测试HTTP GET请求
 
 ```
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 @Test
 public void homePage() throws Exception {
   mockMvc.perform(MockMvcRequestBuilders.get("/readingList"))
