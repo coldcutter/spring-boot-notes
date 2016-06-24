@@ -115,3 +115,9 @@ public void postBook() throws Exception {
 
 测试安全性：
 
+引入包：
+
+```
+testCompile("org.springframework.security:spring-security-test")
+```
+
