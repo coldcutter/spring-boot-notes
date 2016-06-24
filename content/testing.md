@@ -112,3 +112,6 @@ public void postBook() throws Exception {
       .andExpect(model().attribute("books", contains(samePropertyValuesAs(expectedBook))));
 }
 ```
+
+测试安全性：
+
