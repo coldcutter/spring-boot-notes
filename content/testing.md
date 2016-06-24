@@ -134,3 +134,12 @@ public void setupMockMvc() {
 ```
 
 springSecurity()是SecurityMockMvcConfigurers的一个静态方法，它会遵照你的安全配置。
+
+```
+@Test
+public void homePage_unauthenticatedUser() throws Exception {
+  mockMvc.perform(get("/"))
+      .andExpect(status().is3xxRedirection())
+      .andExpect(header().string("Location", "http://localhost/login"));
+}
+```
