@@ -143,3 +143,8 @@ public void homePage_unauthenticatedUser() throws Exception {
       .andExpect(header().string("Location", "http://localhost/login"));
 }
 ```
+
+如何测试一个通过认证的请求？Spring Security提供两个注解：
+
+* @WithMockUser——加载一个UserDetails，使用指定的用户名、密码和权限
+* @WithUserDetails——根据指定的用户名查找一个UserDetails对象并加载
