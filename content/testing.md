@@ -179,3 +179,24 @@ public void homePage_authenticatedUser() throws Exception {
 
 ## 测试运行中的应用
 
+Spring Boot’s @WebIntegrationTest注解，不仅可以创建一个应用上下文，还可以启动内置Servlet容器。
+
+```
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = ReadingListApplication.class)
+@WebIntegrationTest
+public class SimpleWebTest {
+  
+  @Test(expected = HttpClientErrorException.class)
+  public void pageNotFound() {
+    try {
+      RestTemplate rest = new RestTemplate();
+      rest.getForObject("http://localhost:8080/bogusPage", String.class);
+      fail("Should result in HTTP 404");
+    } catch (HttpClientErrorException e) {
+      assertEquals(HttpStatus.NOT_FOUND, e.getStatusCode());
+      throw e;
+    }
+  }
+}
+```
