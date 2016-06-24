@@ -176,3 +176,5 @@ public void homePage_authenticatedUser() throws Exception {
       .andExpect(model().attribute("books", hasSize(0)))
 }
 ```
+
+## 测试运行的应用
