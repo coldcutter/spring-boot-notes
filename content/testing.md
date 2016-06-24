@@ -55,5 +55,12 @@ public class MockMvcWebTests {
 测试HTTP GET请求
 
 ```
-
+@Test
+public void homePage() throws Exception {
+  mockMvc.perform(MockMvcRequestBuilders.get("/readingList"))
+      .andExpect(MockMvcResultMatchers.status().isOk())    
+      .andExpect(MockMvcResultMatchers.view().name("readingList"))
+      .andExpect(MockMvcResultMatchers.model().attributeExists("books"))
+      .andExpect(MockMvcResultMatchers.model().attribute("books",Matchers.is(Matchers.empty())));
+}
 ```
