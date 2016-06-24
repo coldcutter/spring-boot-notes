@@ -61,6 +61,6 @@ public void homePage() throws Exception {
       .andExpect(MockMvcResultMatchers.status().isOk())    
       .andExpect(MockMvcResultMatchers.view().name("readingList"))
       .andExpect(MockMvcResultMatchers.model().attributeExists("books"))
-      .andExpect(MockMvcResultMatchers.model().attribute("books",Matchers.is(Matchers.empty())));
+      .andExpect(MockMvcResultMatchers.model().attribute("books", Matchers.is(Matchers.empty())));
 }
 ```
