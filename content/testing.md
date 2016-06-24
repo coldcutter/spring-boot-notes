@@ -156,3 +156,23 @@ public void homePage_authenticatedUser() throws Exception {
    ...
 }
 ```
+
+@WithUserDetails注解使用配置好的UserDetailsService来加载UserDetails对象：
+
+```
+@Test
+@WithUserDetails("craig")
+public void homePage_authenticatedUser() throws Exception {
+
+  Reader expectedReader = new Reader();
+  expectedReader.setUsername("craig");
+  expectedReader.setPassword("password");
+  expectedReader.setFullname("Craig Walls");
+  
+  mockMvc.perform(get("/"))
+      .andExpect(status().isOk())
+      .andExpect(view().name("readingList"))
+      .andExpect(model().attribute("reader", samePropertyValuesAs(expectedReader)))
+      .andExpect(model().attribute("books", hasSize(0)))
+}
+```
