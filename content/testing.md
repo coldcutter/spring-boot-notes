@@ -220,3 +220,4 @@ rest.getForObject("http://localhost:{port}/bogusPage", String.class, port);
 
 **使用Selenium测试HTML页面**
 
+[Selenium](http://www.seleniumhq.org/)启用浏览器来测试，就像手工测试一样，不过它可以自动化和重复执行。
