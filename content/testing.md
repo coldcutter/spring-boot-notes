@@ -153,5 +153,6 @@ public void homePage_unauthenticatedUser() throws Exception {
 @Test
 @WithMockUser(username="craig", password="password", roles="READER")
 public void homePage_authenticatedUser() throws Exception {
-... }
+   ...
+}
 ```
