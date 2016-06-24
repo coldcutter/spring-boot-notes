@@ -218,3 +218,5 @@ private int port;
 rest.getForObject("http://localhost:{port}/bogusPage", String.class, port);
 ```
 
+**使用Selenium测试HTML页面**
+
