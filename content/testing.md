@@ -55,10 +55,6 @@ public class MockMvcWebTests {
 测试HTTP GET请求
 
 ```
-import static org.hamcrest.Matchers.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 @Test
 public void homePage() throws Exception {
   mockMvc.perform(MockMvcRequestBuilders.get("/readingList"))
@@ -68,3 +64,21 @@ public void homePage() throws Exception {
       .andExpect(MockMvcResultMatchers.model().attribute("books", Matchers.is(Matchers.empty())));
 }
 ```
+
+加入静态引入，可以更简洁：
+
+```
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@Test
+public void homePage() throws Exception {
+  mockMvc.perform(get("/readingList"))
+      .andExpect(status().isOk())
+      .andExpect(view().name("readingList"))
+      .andExpect(model().attributeExists("books"))
+      .andExpect(model().attribute("books", is(empty())));
+}
+```
+
