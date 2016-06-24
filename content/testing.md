@@ -200,3 +200,21 @@ public class SimpleWebTest {
   }
 }
 ```
+
+默认启动8080端口，你可以设置如下之一来选择随机端口：
+
+```
+@WebIntegrationTest(value={"server.port=0"})
+@WebIntegrationTest("server.port=0")
+@WebIntegrationTest(randomPort=true)
+```
+
+现在端口是随机了，但是如何获取这个端口呢？你可以注入进来：
+
+```
+@Value("${local.server.port}")
+private int port;
+
+rest.getForObject("http://localhost:{port}/bogusPage", String.class, port);
+```
+
