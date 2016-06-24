@@ -121,7 +121,7 @@ public void postBook() throws Exception {
 testCompile("org.springframework.security:spring-security-test")
 ```
 
-然后：
+然后加一行：
 
 ```
 @Before
