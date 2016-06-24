@@ -104,6 +104,11 @@ public void postBook() throws Exception {
   expectedBook.setIsbn("1234567890");
   expectedBook.setDescription("DESCRIPTION");
   
-  
-
+  mockMvc.perform(get("/readingList"))
+      .andExpect(status().isOk())
+      .andExpect(view().name("readingList"))
+      .andExpect(model().attributeExists("books"))
+      .andExpect(model().attribute("books", hasSize(1)))
+      .andExpect(model().attribute("books", contains(samePropertyValuesAs(expectedBook))));
+}
 ```
