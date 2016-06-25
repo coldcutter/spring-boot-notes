@@ -7,5 +7,5 @@
 * [4. 测试](content/testing.md)
 * [7. Actuator](content/actuator.md)
 * [8. 部署](content/deploy.md)
-* 5. Groovy
+* [5. Groovy](content/groovy.md)
 
