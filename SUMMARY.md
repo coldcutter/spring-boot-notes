@@ -8,5 +8,5 @@
 * [5. Groovy](content/groovy.md)
 * [7. Actuator](content/actuator.md)
 * [8. 部署](content/deploy.md)
-* Grails
+* [Grails](content/grails.md)
 
