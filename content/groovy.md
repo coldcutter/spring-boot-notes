@@ -2,6 +2,8 @@
 
 Spring Boot CLI可以很方便地使用Groovy编写Spring应用程序。
 
+## 5.2 创建CLI项目
+
 首先创建一个项目目录：
 
 ```
@@ -138,3 +140,159 @@ $ spring run .
 发生了什么？
 
 当你用CLI运行应用的时候，CLI试图使用内置的Groovy编译器编译Groovy代码，不过因为有些类型不认识（如JdbcTemplate, Controller, RequestMapping），所以失败了，不过它没放弃，它知道JdbcTemplate可以通过Spring Boot JDBC starter得到，Spring MVC的类型可以通过Spring Boot web starter得到，所以它会从Maven仓库（默认是Maven Central）获取这些依赖。此时还是失败，因为没有import，不过CLI知道许多常用类型所在的包，它会添加到Groovy编译器的默认包列表，这时候如果没有别的语法错误，编译通过，并且CLI通过内部的启动方法来运行应用，此时，Spring Boot自动配置介入。
+
+## 5.2 获取依赖
+
+@Grab注解来自于Groovy’s Grape（Groovy Adaptable Packaging Engine or Groovy Advanced Packaging Engine），用法：
+
+```
+@Grab(group="com.h2database", module="h2", version="1.4.190")
+@Grab("com.h2database:h2:1.4.185")
+```
+
+Spring Boot CLI扩展了@Grab，使它用起来更简洁，许多依赖都不用指定版本（版本根据CLI的版本来确定），对一些常用的依赖，甚至都不用指定group：
+
+```
+@Grab("com.h2database:h2")
+@Grab("h2")
+```
+
+**覆盖默认依赖版本**
+
+Spring Boot引入了@GrabMetadata注解：
+
+```
+@GrabMetadata(“com.myorg:custom-versions:1.0.0”)
+```
+
+如上，它会从Maven仓库的com/myorg目录加载一个名为custom-versions.properties的属性文件，每行的键是group ID和module ID，值是版本号：
+
+```
+com.h2database:h2=1.4.186
+```
+
+[Spring IO platform](http://platform.spring.io/platform/)提供了一套兼容的依赖版本集，它是Spring Boot依赖版本集的超集：
+
+```
+@GrabMetadata('io.spring.platform:platform-versions:1.0.4.RELEASE')
+```
+
+**添加依赖仓库**
+
+@GrabResolver注解可以添加依赖仓库，比如：
+
+```
+@GrabResolver(name='jboss', root='https://repository.jboss.org/nexus/content/groups/public-jboss')
+```
+
+## 5.3 运行测试
+
+CLI提供了test命令来运行测试，测试可以放在项目的任何位置，不过建议放在一起，比如tests目录下：
+
+```
+$ mkdir tests
+```
+
+创建ReadingListControllerTest.groovy：
+
+```
+import org.springframework.test.web.servlet.MockMvc
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
+import static org.mockito.Mockito.*
+
+class ReadingListControllerTest {
+  
+  @Test
+  void shouldReturnReadingListFromRepository() {
+    List<Book> expectedList = new ArrayList<Book>()
+    expectedList.add(new Book(
+        id: 1,
+        reader: "Craig",
+        isbn: "9781617292545",
+        title: "Spring Boot in Action",
+        author: "Craig Walls",
+        description: "Spring Boot in Action is ..."
+    ))
+    
+    def mockRepo = mock(ReadingListRepository.class)
+    when(mockRepo.findByReader("Craig")).thenReturn(expectedList)
+    
+    def controller = new ReadingListController(readingListRepository: mockRepo)
+    MockMvc mvc = standaloneSetup(controller).build()
+    mvc.perform(get("/"))
+        .andExpect(view().name("readingList"))
+        .andExpect(model().attribute("books", expectedList))
+  }
+}
+```
+
+运行测试：
+
+```
+$ spring test tests/ReadingListControllerTest.groovy
+```
+
+如果有多个测试，你也可以只提供一个目录：
+
+```
+$ spring test tests
+```
+
+如果你更倾向于写Spock测试，而不是JUnit，test命令也可以执行Spock测试：
+
+```
+import org.springframework.test.web.servlet.MockMvc
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
+import static org.mockito.Mockito.*
+
+class ReadingListControllerSpec extends Specification {
+  
+  MockMvc mockMvc
+  List<Book> expectedList
+  
+  def setup() {
+    expectedList = new ArrayList<Book>()
+    expectedList.add(new Book(
+      id: 1,
+      reader: "Craig",
+      isbn: "9781617292545",
+      title: "Spring Boot in Action",
+      author: "Craig Walls",
+      description: "Spring Boot in Action is ..."
+    ))
+    
+    def mockRepo = mock(ReadingListRepository.class)
+    when(mockRepo.findByReader("Craig")).thenReturn(expectedList)
+    
+    def controller = new ReadingListController(readingListRepository: mockRepo)
+    mockMvc = standaloneSetup(controller).build()
+  }
+  
+  def "Should put list returned from repository into model"() {
+    when:
+      def response = mockMvc.perform(get("/"))
+    
+    then:
+      response.andExpect(view().name("readingList"))
+              .andExpect(model().attribute("books", expectedList))
+  }
+}
+```
+
+## 5.4 创建可部署的包
+
+在项目根目录下，执行：
+
+```
+$ spring jar ReadingList.jar .
+```
+
+然后就可以运行了：
+
+```
+$ java -jar ReadingList.jar
+```
