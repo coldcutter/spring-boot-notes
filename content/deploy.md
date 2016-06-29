@@ -93,3 +93,63 @@ liquibase:
 ```
 
 ## 8.3 云端部署
+
+### 8.3.1 部署到Cloud Foundry
+
+Cloud Foundry是Pivotal公司的一个PaaS（Platform as a Service）平台，该公司是Spring生态系统的支持公司。
+
+我们将要把应用部署到Pivotal Web Services（[PWS](http://run.pivotal.io)），是Pivotal的一个公共Cloud Foundry平台。上去注册，有60天的试用期，从 https://console.run.pivotal.io/tools 下载并安装cf命令行工具，首先得登录：
+
+```
+$ cf login -a https://api.run.pivotal.io
+```
+
+部署：
+
+```
+$ cf push sbia-readinglist -p build/libs/readinglist.war
+```
+
+第一个参数是Cloud Foundry上的应用名称，并且会是应用的子域名 http://sbia-readinglist.cfapps.io。所以得确保唯一，不过你可以使用--random-route来随机生成一个子域名：
+
+```
+$ cf push sbia-readinglist -p build/libs/readinglist.war --random-route
+```
+
+不仅仅是WAR包，你也可以提供可执行JAR包，甚至是通过Spring Boot CLI运行的未编译的Groovy脚本。
+
+重启应用：
+
+```
+$ cf restart
+```
+
+Cloud Foundry提供一系列服务，可以从marketplace找到，比如MySQL等，PostgreSQL服务在上面叫做elephantsql，有不同的套餐可以选择，查看套餐：
+
+```
+$ cf marketplace -s elephantsql
+```
+
+我们选择免费的turtle套餐，使用如下命令创建一个数据库服务：
+
+```
+$ cf create-service elephantsql turtle readinglistdb
+```
+
+服务创建完毕后，需要绑定到我们的应用：
+
+```
+$ cf bind-service sbia-readinglist readinglistdb
+```
+
+绑定服务只不过是通过VCAP_SERVICES环境变量来提供服务的连接信息，它并不会改变应用本身。我们不必修改应用，而是使用restage命令：
+
+```
+$ cf restage sbia-readinglist
+```
+
+cf restage命令使得Cloud Foundry重新部署应用并重新读取VCAP_SERVICES值。
+
+### 8.3.2 部署到Heroku
+
+Heroku使用不同的方式部署应用，通过Git仓库，每次你push代码，它会构建和部署应用
