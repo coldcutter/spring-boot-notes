@@ -63,3 +63,18 @@ spring:
 
 **远程开发**
 
+devtools支持远程调试，一般情况下，你不会用到远程调试，比如生产环境，但当你需要用一些本地没法使用的云服务时，可能会有一个远程开发环境，首先你得设置一个远程密码：
+
+```
+spring:
+  devtools:
+    remote:
+      secret: myappsecret
+```
+
+当你设置了这个属性，会启用一个支持远程开发的组件，它会监听进来的修改请求，重启应用或者触发浏览器刷新。
+
+然后，你得在本地运行远程开发客户端，以类的形式，类名是org.springframework.boot.devtools.RemoteSpringApplication，被设计成在IDE里面运行，参数是远程应用的地址。
+
+假如你把reading-list部署在Cloud Foundry上，地址是 https://readinglist.cfapps.io 。比如你使用IntelliJ IDEA，如下步骤启动client：
+
