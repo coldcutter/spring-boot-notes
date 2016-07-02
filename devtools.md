@@ -78,3 +78,19 @@ spring:
 
 假如你把reading-list部署在Cloud Foundry上，地址是 https://readinglist.cfapps.io 。比如你使用IntelliJ IDEA，如下步骤启动client：
 
+1. 选择Run > Edit Configurations...
+2. 按“+”号，选择“Application”
+3. 在Main class中填写org.springframework.boot.devtools.RemoteSpringApplication
+4. 在Program arguments中填写https://readinglist.cfapps.io
+
+确定，然后就可以运行client了，你就可以修改你IDE中的应用了，当检测到修改时，它们会被推送到远程server。
+
+你还可以在IDE中远程调试，不过你得确保远程应用启用了远程调试，通常可以通过配置JAVA_OPTS来启用，举个例子，如果你的应用部署在Cloud Foundry上，你可以在你的应用的manifest.yml文件里设置：
+
+```
+---
+  env:
+    JAVA_OPTS: "-Xdebug -Xrunjdwp:server=y,transport=dt_socket,suspend=n"
+```
+
+当远程应用启动且与本地调试服务器建立了连接后，你就可以像调试本地应用一样设置断点和单步调试了（因为网络延迟可能会有点慢）。
