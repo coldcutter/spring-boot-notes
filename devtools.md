@@ -94,3 +94,28 @@ spring:
 ```
 
 当远程应用启动且与本地调试服务器建立了连接后，你就可以像调试本地应用一样设置断点和单步调试了（因为网络延迟可能会有点慢）。
+
+**默认开发属性**
+
+有些配置属性通常在开发的时候都需要设置，但在生产配置中不用，比如视图模板缓存，在开发中最好关闭，这样修改模板可以立刻看到效果，但是为了性能，在生产上应该启用。
+
+Spring Boot默认对所有支持的模板启用缓存，但是如果用了开发者工具，缓存会被禁用，本质上就是下面的属性会被设置成false：
+
+* spring.thymeleaf.cache
+* spring.freemarker.cache
+* spring.velocity.cache
+* spring.mustache.cache
+* spring.groovy.template.cache
+
+这样你就省得在开发的时候自己禁用它们了。
+
+**全局配置开发者工具**
+
+在你的用户目录下创建一个文件.spring-boot-devtools.properties（注意有一个点），在这个文件里你可以设置所有项目共用的开发者工具属性，比如：
+
+```
+spring.devtools.restart.trigger-file=.trigger
+spring.devtools.livereload.enabled=false
+```
+
+然后，如果要覆盖这些属性，在你的项目里配置就行了。
