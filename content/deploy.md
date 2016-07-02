@@ -152,4 +152,34 @@ cf restage命令使得Cloud Foundry重新部署应用并重新读取VCAP_SERVICE
 
 ### 8.3.2 部署到Heroku
 
-Heroku使用不同的方式部署应用，通过Git仓库，每次你push代码，它会构建和部署应用
+Heroku使用不同的方式部署应用，它为你的应用维护Git仓库，每次你push代码，它会构建和部署应用。
+
+首先你需要初始化你的项目目录作为Git仓库：
+
+```
+$ git init
+```
+
+这样就能使得Heroku命令行工具为你的项目自动添加远程Heroku Git仓库，然后使用apps:create命令在Heroku中建立应用：
+
+```
+$ heroku apps:create sbia-readinglist
+```
+
+上面的命令指定了项目的名称是sbia-readinglist，这个名字会作为Git仓库的名字以及应用的子域名，所以要确保名字唯一，或者你可以留空，这样Heroku会帮你生成一个唯一的名字。
+
+apps:create命令会创建一个远程Git仓库 https://git.heroku.com/sbia-readinglist.git ，并且会在你的本地项目的Git配置中添加一个名为“heroku”的远程引用（可以用git remote -v查看），这样就可以用git命令push到Heroku了。
+
+Heroku需要你提供一个名为Procfile的文件来告诉它如何运行应用，对于我们的reading-list应用来说，我们需要告诉Heroku用java命令来运行WAR包，假设我们用Gradle来构建，则需要在Procfile有一行：
+
+```
+web: java -Dserver.port=$PORT -jar build/libs/readinglist.war
+```
+
+Maven则是：
+
+```
+web: java -Dserver.port=$PORT -jar target/readinglist.war
+```
+
+你需要设置server.port为Heroku分配的端口（由$PORT变量提供）。
