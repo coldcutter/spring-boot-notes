@@ -10,4 +10,6 @@ Spring Boot是建立在Spring框架的基础上的，所以最好对Spring框架
 
 后面会陆续补充一些实际应用中遇到的问题和解决方法，如果有不对的地方，欢迎指正！
 
-**电子书地址**：https://coldcutter.gitbooks.io/spring-boot-notes/content/
+**电子书**：https://coldcutter.gitbooks.io/spring-boot-notes/content/
+
+**GitHub**：https://github.com/coldcutter/spring-boot-notes
