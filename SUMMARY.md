@@ -9,5 +9,5 @@
 * [6. Grails](content/grails.md)
 * [7. Actuator](content/actuator.md)
 * [8. 部署](content/deploy.md)
-* [A. 开发者工具](devtools.md)
+* [A. 开发者工具](content/devtools.md)
 
