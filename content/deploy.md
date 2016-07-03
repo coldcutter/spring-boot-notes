@@ -183,3 +183,66 @@ web: java -Dserver.port=$PORT -jar target/readinglist.war
 ```
 
 你需要设置server.port为Heroku分配的端口（由$PORT变量提供）。
+
+对于Gradle应用来讲，当Heroku试着构建应用的时候，它会执行stage任务，所以你需要在build.gradle中加入：
+
+```
+task stage(dependsOn: ['build']) {
+}
+```
+
+它仅仅依赖了build任务，以便用stage任务来触发build。
+
+你可能需要指定构建应用时的Java版本，最方便的方法是在项目根目录下建一个system.properties文件来设置：
+
+```
+java.runtime.version=1.7
+```
+
+接下来就可以push到Heroku了：
+
+```
+$ git commit -am "Initial commit"
+$ git push heroku master
+```
+
+代码提交之后，Heroku会用Maven或Gradle构建应用，然后用Procfile中的指令运行，没问题的话你就可以访问应用了，比如 https://sbia-readinglist.herokuapp.com
+
+然后，我们可以创建并绑定到一个PostgreSQL服务：
+
+```
+$ heroku addons:add heroku-postgresql:hobby-dev
+```
+
+这里我们选用了heroku-postgresql服务的免费的hobby-dev套餐，现在PostgreSQL已经创建并绑定到我们的应用了，并且Heroku会自动重启应用确保绑定成功。但此刻我们看/health接口，发现还是在使用内置的H2数据库，那是因为H2的自动配置仍然生效，我们并没有告诉Spring Boot去使用PostgreSQL。
+
+一种选择是设置spring.datasource.\*属性，我们可以使用如下命令查看数据库连接信息：
+
+```
+$ heroku addons:open waking-carefully-3728
+```
+
+其中waking-carefully-3728是我们的数据库实例的名字。这个命令会在浏览器中打开一个页面，里面有详细的数据库连接信息。
+
+但是有一种更简单的方式，那就是使用Spring Cloud Connectors，它能和Cloud Foundry和Heroku一起工作，来发现绑定到应用的服务并自动配置应用使用这些服务。
+
+我们只需要把它加入到依赖：
+
+```
+compile("org.springframework.boot:spring-boot-starter-cloud-connectors")
+```
+
+Spring Cloud Connectors只有在“cloud” profile激活的时候才会工作，在Heroku中激活“cloud” profile：
+
+```
+$ heroku config:set SPRING_PROFILES_ACTIVE="cloud"
+```
+
+然后就是push代码：
+
+```
+$ git commit -am "Add cloud connector"
+$ git push heroku master
+```
+
+然后等应用启动完，再看/health接口，就会发现database已经变成了PostgreSQL。
